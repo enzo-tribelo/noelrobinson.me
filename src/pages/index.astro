@@ -19,12 +19,26 @@ const social = [
 ];
 
 const techGroups = [
+  { title: 'AI & Orchestration', items: [
+    { n: 'Claude', u: 'https://claude.ai/', p: siClaude.path },
+    { n: 'OpenClaw', u: 'https://openclaw.ai/' },
+    { n: 'Amazon Bedrock', u: 'https://aws.amazon.com/bedrock/' },
+    { n: 'Multi-Agent Systems', u: 'https://docs.anthropic.com/' },
+    { n: 'OpenAI', u: 'https://openai.com/' },
+    { n: 'Whisper', u: 'https://openai.com/research/whisper' },
+    { n: 'ElevenLabs', u: 'https://elevenlabs.io/' },
+    { n: 'LLM Tooling', u: 'https://docs.anthropic.com/en/docs/build-with-claude/tool-use' },
+  ]},
   { title: 'Cloud & Infrastructure', items: [
     { n: 'AWS', u: 'https://aws.amazon.com/' },
     { n: 'Azure', u: 'https://azure.microsoft.com/' },
+    { n: 'Vercel', u: 'https://vercel.com/' },
     { n: 'Kubernetes', u: 'https://kubernetes.io/', p: siKubernetes.path },
     { n: 'Lambda', u: 'https://aws.amazon.com/lambda/' },
+    { n: 'Fargate', u: 'https://aws.amazon.com/fargate/' },
     { n: 'Amplify', u: 'https://aws.amazon.com/amplify/' },
+    { n: 'SES', u: 'https://aws.amazon.com/ses/' },
+    { n: 'Route 53', u: 'https://aws.amazon.com/route53/' },
     { n: 'Fastly', u: 'https://www.fastly.com/', p: siFastly.path },
     { n: 'FluxCD', u: 'https://fluxcd.io/', p: siFlux.path },
     { n: 'Docker', u: 'https://www.docker.com/', p: siDocker.path },
@@ -32,13 +46,16 @@ const techGroups = [
   { title: 'Languages', items: [
     { n: 'TypeScript', u: 'https://www.typescriptlang.org/', p: siTypescript.path },
     { n: 'JavaScript', u: 'https://www.javascript.com/', p: siJavascript.path },
+    { n: 'Python', u: 'https://www.python.org/' },
     { n: 'Kotlin', u: 'https://kotlinlang.org/', p: siKotlin.path },
     { n: 'Java', u: 'https://docs.oracle.com/javase/' },
   ]},
   { title: 'Frontend', items: [
-    { n: 'React', u: 'https://reactjs.org/', p: siReact.path },
-    { n: 'Vue.js', u: 'https://vuejs.org/', p: siVuedotjs.path },
     { n: 'Next.js', u: 'https://nextjs.org/', p: siNextdotjs.path },
+    { n: 'React', u: 'https://reactjs.org/', p: siReact.path },
+    { n: 'Astro', u: 'https://astro.build/' },
+    { n: 'Tailwind CSS', u: 'https://tailwindcss.com/' },
+    { n: 'Vue.js', u: 'https://vuejs.org/', p: siVuedotjs.path },
     { n: 'Gatsby', u: 'https://www.gatsbyjs.com/', p: siGatsby.path },
     { n: 'Hugo', u: 'https://gohugo.io/', p: siHugo.path },
   ]},
@@ -47,11 +64,13 @@ const techGroups = [
     { n: 'GraphQL', u: 'https://graphql.org/', p: siGraphql.path },
     { n: 'Micro Front Ends', u: 'https://micro-frontends.org/' },
     { n: 'Module Federation', u: 'https://webpack.js.org/concepts/module-federation/', p: siWebpack.path },
+    { n: 'OIDC / Auth', u: 'https://openid.net/developers/how-connect-works/' },
     { n: 'Micronaut', u: 'https://micronaut.io/' },
     { n: 'Spring', u: 'https://spring.io/', p: siSpring.path },
   ]},
-  { title: 'Databases', items: [
+  { title: 'Databases & Storage', items: [
     { n: 'PostgreSQL', u: 'https://www.postgresql.org/', p: siPostgresql.path },
+    { n: 'Supabase', u: 'https://supabase.com/' },
     { n: 'MongoDB', u: 'https://www.mongodb.com/', p: siMongodb.path },
     { n: 'Elasticsearch', u: 'https://www.elastic.co/', p: siElasticsearch.path },
     { n: 'DynamoDB', u: 'https://aws.amazon.com/dynamodb/' },
@@ -93,10 +112,15 @@ const lifeGroups = [
     { n: "Helen's Kitchen", u: 'https://helens.kitchen' },
     { n: 'Lyme Regis', u: 'http://www.lymeregis.org/' },
   ]},
-  { title: 'Smart Home & AI', items: [
+  { title: 'Smart Home & Automation', items: [
     { n: 'Home Assistant', u: 'https://www.home-assistant.io/', p: siHomeassistant.path },
     { n: 'SmartThings', u: 'https://www.smartthings.com/' },
-    { n: 'Claude', u: 'https://claude.ai/', p: siClaude.path },
+    { n: 'eWeLink', u: 'https://www.ewelink.cc/' },
+  ]},
+  { title: 'Trading & Markets', items: [
+    { n: 'Binance API', u: 'https://developers.binance.com/' },
+    { n: 'Polymarket', u: 'https://polymarket.com/' },
+    { n: 'Algorithmic Trading', u: 'https://www.investopedia.com/terms/a/algorithmictrading.asp' },
   ]},
   { title: 'Podcasts', items: [
     { n: 'Spotify', u: 'https://open.spotify.com/user/1127314265', p: siSpotify.path },
@@ -133,7 +157,7 @@ const lifeGroups = [
         Noel Robinson
       </h1>
       <p class="text-lg sm:text-xl text-[#999] max-w-2xl leading-relaxed mb-10">
-        Building high-performing engineering teams and cloud-native platforms. Based in the UK. Passionate about DevOps, evolutionary architecture, and shipping great products.
+        Building high-performing engineering teams and cloud-native platforms. Currently exploring AI orchestration, multi-agent systems, and autonomous workflows. Based in the UK.
       </p>
       <div class="flex items-center gap-5">
         {social.map(s => (
