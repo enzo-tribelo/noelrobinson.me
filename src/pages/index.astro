@@ -12,7 +12,7 @@ import {
 
 const social = [
   { name: 'LinkedIn', url: 'https://www.linkedin.com/in/noelarobinson/', path: 'M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z' },
-  { name: 'GitHub', url: 'https://github.com/noelrobinson', path: siGithub.path },
+  { name: 'GitHub', url: 'https://github.com/pittdog', path: siGithub.path },
   { name: 'X', url: 'https://x.com/noelrobinson', path: siX.path },
   { name: 'Instagram', url: 'https://www.instagram.com/noelarobinson/', path: siInstagram.path },
   { name: 'Spotify', url: 'https://open.spotify.com/user/1127314265', path: siSpotify.path },
@@ -151,8 +151,8 @@ const lifeGroups = [
     <div class="max-w-5xl mx-auto px-6 h-14 flex items-center justify-between">
       <a href="#" class="text-white font-semibold text-sm tracking-wide">Noel Robinson</a>
       <div class="hidden sm:flex items-center gap-8">
-        <a href="#projects" class="text-sm text-[#888] hover:text-white transition-colors">Projects</a>
         <a href="#tech" class="text-sm text-[#888] hover:text-white transition-colors">Tech</a>
+        <a href="#projects" class="text-sm text-[#888] hover:text-white transition-colors">Projects</a>
         <a href="#books" class="text-sm text-[#888] hover:text-white transition-colors">Books</a>
         <a href="#leadership" class="text-sm text-[#888] hover:text-white transition-colors">Leadership</a>
         <a href="#life" class="text-sm text-[#888] hover:text-white transition-colors">Life</a>
@@ -177,27 +177,6 @@ const lifeGroups = [
             <svg viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5">
               <path d={s.path}/>
             </svg>
-          </a>
-        ))}
-      </div>
-    </section>
-
-    <!-- Projects -->
-    <section id="projects" class="pb-24 scroll-mt-20">
-      <h2 class="text-2xl sm:text-3xl font-bold text-white mb-12">Projects</h2>
-      <div class="grid sm:grid-cols-2 gap-4">
-        {projects.map(p => (
-          <a
-            href={p.url}
-            target="_blank"
-            rel="noopener noreferrer"
-            class="group p-5 rounded-lg bg-[#161616] hover:bg-[#1e1e1e] transition-all"
-          >
-            <div class="flex items-center justify-between mb-1.5">
-              <span class="text-sm font-semibold text-white">{p.name}</span>
-              <span class="text-xs text-[#333] group-hover:text-[#666] transition-colors">↗</span>
-            </div>
-            <p class="text-xs text-[#666]">{p.desc}</p>
           </a>
         ))}
       </div>
@@ -228,6 +207,26 @@ const lifeGroups = [
               ))}
             </div>
           </div>
+        ))}
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects" class="pb-24 scroll-mt-20">
+      <h2 class="text-2xl sm:text-3xl font-bold text-white mb-12">Projects</h2>
+      <div class="grid sm:grid-cols-2 gap-x-12 gap-y-1">
+        {projects.map(p => (
+          <a
+            href={p.url}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="group flex items-center gap-3 py-2.5 text-[#999] hover:text-white transition-colors"
+          >
+            <span class="w-1 h-1 rounded-full bg-[#444] shrink-0"></span>
+            <span class="text-sm font-medium">{p.name}</span>
+            <span class="text-xs text-[#444] hidden sm:inline">— {p.desc}</span>
+            <span class="text-xs text-[#333] group-hover:text-[#666] ml-auto transition-colors">↗</span>
+          </a>
         ))}
       </div>
     </section>
