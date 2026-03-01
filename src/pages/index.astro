@@ -37,11 +37,11 @@ const leadership = [
   { name: 'Agile', url: 'https://agilemanifesto.org/' },
   { name: 'DevOps', url: 'https://aws.amazon.com/devops/what-is-devops/' },
   { name: 'Meetup', url: 'https://www.meetup.com/members/31470592/' },
+  { name: 'CNCF', url: 'https://www.cncf.io/' },
 ];
 
 const cloud = [
   { name: 'FluxCD', url: 'https://fluxcd.io/', iconPath: siFlux.path },
-  { name: 'CNCF', url: 'https://www.cncf.io/' },
   { name: 'AWS', url: 'https://aws.amazon.com/' },
   { name: 'Lambda', url: 'https://aws.amazon.com/lambda/' },
   { name: 'AWS Amplify', url: 'https://aws.amazon.com/amplify/' },
@@ -61,7 +61,6 @@ const code = [
   { name: 'Java', url: 'https://docs.oracle.com/javase/' },
   { name: 'JavaScript', url: 'https://www.javascript.com/', iconPath: siJavascript.path },
   { name: 'TypeScript', url: 'https://www.typescriptlang.org/', iconPath: siTypescript.path },
-  { name: 'GitHub', url: 'https://github.com/noelrobinson', iconPath: siGithub.path },
 ];
 
 const frontend = [
@@ -73,7 +72,7 @@ const frontend = [
 ];
 
 const frameworks = [
-  { name: 'Micro Front Ends', url: '#' },
+  { name: 'Micro Front Ends', url: 'https://micro-frontends.org/' },
   { name: 'Module Federation', url: 'https://webpack.js.org/concepts/module-federation/', iconPath: siWebpack.path },
   { name: 'Micronaut', url: 'https://micronaut.io/' },
   { name: 'Spring', url: 'https://spring.io/', iconPath: siSpring.path },
@@ -92,106 +91,279 @@ const interests = [
   { name: 'eWeLink', url: 'https://www.ewelink.cc/' },
 ];
 
+const ai = [
+  { name: 'Claude', url: 'https://claude.ai/', iconPath: siClaude.path },
+];
+
 const health = [
   { name: 'Revival Strength', url: 'https://revival-strength.com/' },
   { name: 'Truecoach', url: 'https://app.truecoach.co/' },
   { name: 'Strike Fitness', url: '#' },
   { name: 'BattleGround Fitness', url: 'https://www.mybattleground.co.uk/' },
   { name: 'CrossFit Bath', url: 'https://crossfitbath.com/' },
+  { name: 'Stotherts Rugby', url: 'https://www.pitchero.com/clubs/stothertpitt/' },
 ];
 
 const family = [
-  { name: 'Stotherts Rugby', url: 'https://www.pitchero.com/clubs/stothertpitt/' },
-  { name: 'Downs Syndrome', url: 'https://www.downs-syndrome.org.uk/' },
+  { name: 'Downs Syndrome Association', url: 'https://www.downs-syndrome.org.uk/' },
   { name: 'Helens Kitchen', url: 'https://helens.kitchen' },
-  { name: 'Mangia Bene', url: 'http://mangiabenebath.uk' },
   { name: 'Lyme Regis', url: 'http://www.lymeregis.org/' },
 ];
 
-const ai = [
-  { name: 'Claude', url: 'https://claude.ai/', iconPath: siClaude.path },
-  { name: 'OpenAI', url: 'https://openai.com/' },
-  { name: 'AI', url: 'https://en.wikipedia.org/wiki/Artificial_intelligence' },
-];
-
-const cybersecurity = [
-  { name: 'Cyber Security', url: '#' },
-];
-
-const crypto = [
-  { name: 'Crypto', url: '#' },
-  { name: 'Prediction Markets', url: 'https://polymarket.com/' },
-];
-
-const cms = [
-  { name: 'Contentful', url: 'https://www.contentful.com/', iconPath: siContentful.path },
-];
-
 const podcasts = [
-  { name: 'InfoQ', url: '#' },
-  { name: 'ThoughtWorks', url: '#' },
-  { name: 'Software Engineering Daily', url: '#' },
-  { name: 'Fintech Insider', url: '#' },
-  { name: 'The Cloudcast', url: '#' },
-  { name: 'Simple Leadership', url: '#' },
-  { name: 'Views on Vue', url: '#' },
+  { name: 'Spotify', url: 'https://open.spotify.com/user/1127314265' },
+  { name: 'InfoQ', url: 'https://www.infoq.com/podcasts/' },
+  { name: 'ThoughtWorks', url: 'https://www.thoughtworks.com/insights/podcasts' },
+  { name: 'Software Engineering Daily', url: 'https://softwareengineeringdaily.com/' },
+  { name: 'Fintech Insider', url: 'https://fi.11fs.com/' },
+  { name: 'The Cloudcast', url: 'https://www.thecloudcast.net/' },
+  { name: 'Simple Leadership', url: 'https://simpleleadership.io/' },
+  { name: 'Views on Vue', url: 'https://topenddevs.com/podcasts/views-on-vue' },
 ];
+
+const sections = ['tech', 'books', 'leadership', 'life'];
 ---
 
-<Layout title="Noel Robinson - Tech Leader & Software Architect">
-  <main class="container mx-auto px-4 py-16 max-w-6xl">
-    <!-- Hero Section -->
-    <section class="mb-20 text-center">
-      <h1 class="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent animate-fade-in">
-        Noel Robinson
-      </h1>
-      <p class="text-xl md:text-2xl text-gray-400 mb-8 max-w-3xl mx-auto">
-        Tech Leader, Engineering Manager & Software Architect
-      </p>
-      <p class="text-lg text-gray-500 max-w-2xl mx-auto mb-12">
-        Passionate about building high-performing teams, cloud-native architectures, and modern web technologies.
-        Advocate for DevOps practices, continuous delivery, and evolutionary architecture.
-      </p>
-      
-      <!-- Social Links -->
-      <div class="flex flex-wrap justify-center gap-4 mb-8">
-        {socialLinks.map((link) => (
-          <a
-            href={link.url}
-            target="_blank"
-            rel="noopener noreferrer"
-            class="section-card inline-flex items-center gap-2 px-6 py-3 hover:scale-105 transform"
+<Layout title="Noel Robinson - Tech Leader & Engineer">
+  <!-- Fixed Navigation -->
+  <nav class="fixed top-0 left-0 right-0 z-50 px-6 py-4 bg-[var(--bg-primary)]/80 backdrop-blur-sm border-b border-[var(--accent)]/20">
+    <div class="max-w-7xl mx-auto flex justify-between items-center">
+      <a href="#hero" class="text-lg font-bold tracking-tight hover:text-[var(--accent)] transition-colors">NR</a>
+      <div class="flex gap-6 text-sm">
+        {sections.map(section => (
+          <a 
+            href={`#${section}`} 
+            class="hover:text-[var(--accent)] transition-colors uppercase tracking-wide"
           >
-            <svg viewBox="0 0 24 24" class="w-5 h-5" fill="currentColor">
-              <path d={link.iconPath}/>
-            </svg>
-            <span class="font-medium">{link.name}</span>
+            {section}
           </a>
         ))}
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <!-- Hero Section -->
+    <section id="hero" class="min-h-screen flex items-center justify-center px-6 pt-20">
+      <div class="max-w-7xl w-full">
+        <div class="grid lg:grid-cols-2 gap-12 items-center">
+          <div class="space-y-8">
+            <h1 class="text-7xl md:text-8xl lg:text-9xl font-bold leading-none fade-in">
+              Noel<br/>
+              <span class="text-[var(--accent)]">Robinson</span>
+            </h1>
+            <p class="text-2xl md:text-3xl text-[var(--text-muted)] font-medium fade-in delay-1">
+              Tech Leader & Engineer
+            </p>
+            <p class="text-lg text-[var(--text-dim)] max-w-xl leading-relaxed fade-in delay-2">
+              Building high-performing teams and cloud-native architectures in the UK. 
+              Passionate about DevOps, evolutionary architecture, and modern web technologies.
+            </p>
+          </div>
+          
+          <div class="flex flex-col gap-4 fade-in delay-3">
+            {socialLinks.map((link) => (
+              <a
+                href={link.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                class="group flex items-center gap-4 p-4 bg-[var(--bg-secondary)] border border-transparent hover:border-[var(--accent)] transition-all rounded-sm"
+              >
+                {link.iconPath ? (
+                  <svg viewBox="0 0 24 24" class="w-6 h-6 group-hover:text-[var(--accent)] transition-colors" fill="currentColor">
+                    <path d={link.iconPath}/>
+                  </svg>
+                ) : (
+                  <div class="w-6 h-6 flex items-center justify-center text-sm font-bold group-hover:text-[var(--accent)] transition-colors">
+                    {link.name.slice(0, 2).toUpperCase()}
+                  </div>
+                )}
+                <span class="text-lg font-medium group-hover:text-[var(--accent)] transition-colors">{link.name}</span>
+              </a>
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Tech Stack Section -->
+    <section id="tech" class="min-h-screen px-6 py-32">
+      <div class="max-w-7xl mx-auto">
+        <h2 class="text-5xl md:text-6xl font-bold mb-20">
+          Tech <span class="text-[var(--accent)]">Stack</span>
+        </h2>
+
+        <div class="space-y-16">
+          <!-- Cloud -->
+          <div>
+            <h3 class="text-3xl font-bold mb-6 text-[var(--text-muted)]">Cloud & Infrastructure</h3>
+            <div class="flex flex-wrap gap-3">
+              {cloud.map((item) => (
+                <a 
+                  href={item.url} 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  class="tech-tag"
+                >
+                  {item.iconPath && (
+                    <svg viewBox="0 0 24 24" class="w-4 h-4" fill="currentColor">
+                      <path d={item.iconPath}/>
+                    </svg>
+                  )}
+                  {item.name}
+                </a>
+              ))}
+            </div>
+          </div>
+
+          <!-- Code -->
+          <div>
+            <h3 class="text-3xl font-bold mb-6 text-[var(--text-muted)]">Languages & Tools</h3>
+            <div class="flex flex-wrap gap-3">
+              {code.map((item) => (
+                <a 
+                  href={item.url} 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  class="tech-tag"
+                >
+                  {item.iconPath && (
+                    <svg viewBox="0 0 24 24" class="w-4 h-4" fill="currentColor">
+                      <path d={item.iconPath}/>
+                    </svg>
+                  )}
+                  {item.name}
+                </a>
+              ))}
+            </div>
+          </div>
+
+          <!-- Frontend -->
+          <div>
+            <h3 class="text-3xl font-bold mb-6 text-[var(--text-muted)]">Frontend Frameworks</h3>
+            <div class="flex flex-wrap gap-3">
+              {frontend.map((item) => (
+                <a 
+                  href={item.url} 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  class="tech-tag"
+                >
+                  {item.iconPath && (
+                    <svg viewBox="0 0 24 24" class="w-4 h-4" fill="currentColor">
+                      <path d={item.iconPath}/>
+                    </svg>
+                  )}
+                  {item.name}
+                </a>
+              ))}
+            </div>
+          </div>
+
+          <!-- Frameworks -->
+          <div>
+            <h3 class="text-3xl font-bold mb-6 text-[var(--text-muted)]">Architecture & Frameworks</h3>
+            <div class="flex flex-wrap gap-3">
+              {frameworks.map((item) => (
+                <a 
+                  href={item.url} 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  class="tech-tag"
+                >
+                  {item.iconPath && (
+                    <svg viewBox="0 0 24 24" class="w-4 h-4" fill="currentColor">
+                      <path d={item.iconPath}/>
+                    </svg>
+                  )}
+                  {item.name}
+                </a>
+              ))}
+            </div>
+          </div>
+
+          <!-- APIs -->
+          <div>
+            <h3 class="text-3xl font-bold mb-6 text-[var(--text-muted)]">API Design</h3>
+            <div class="flex flex-wrap gap-3">
+              {api.map((item) => (
+                <a 
+                  href={item.url} 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  class="tech-tag"
+                >
+                  {item.iconPath && (
+                    <svg viewBox="0 0 24 24" class="w-4 h-4" fill="currentColor">
+                      <path d={item.iconPath}/>
+                    </svg>
+                  )}
+                  {item.name}
+                </a>
+              ))}
+            </div>
+          </div>
+
+          <!-- Databases -->
+          <div>
+            <h3 class="text-3xl font-bold mb-6 text-[var(--text-muted)]">Databases</h3>
+            <div class="flex flex-wrap gap-3">
+              {databases.map((item) => (
+                <a 
+                  href={item.url} 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  class="tech-tag"
+                >
+                  {item.iconPath && (
+                    <svg viewBox="0 0 24 24" class="w-4 h-4" fill="currentColor">
+                      <path d={item.iconPath}/>
+                    </svg>
+                  )}
+                  {item.name}
+                </a>
+              ))}
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
     <!-- Books Section -->
-    <section class="mb-16">
-      <h2 class="text-3xl font-bold mb-6 text-blue-400">📚 Recommended Books</h2>
-      <div class="section-card">
-        <div class="flex flex-wrap gap-3">
-          {books.map((item) => (
-            <a href={item.url} target="_blank" rel="noopener noreferrer" class="tech-chip">
-              {item.name}
+    <section id="books" class="min-h-screen px-6 py-32 bg-[var(--bg-secondary)]">
+      <div class="max-w-7xl mx-auto">
+        <h2 class="text-5xl md:text-6xl font-bold mb-20">
+          Recommended <span class="text-[var(--accent)]">Books</span>
+        </h2>
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+          {books.map((book) => (
+            <a 
+              href={book.url} 
+              target="_blank" 
+              rel="noopener noreferrer"
+              class="group p-6 bg-[var(--bg-primary)] border border-transparent hover:border-[var(--accent)] transition-all rounded-sm"
+            >
+              <span class="text-lg group-hover:text-[var(--accent)] transition-colors">{book.name}</span>
             </a>
           ))}
         </div>
       </div>
     </section>
 
-    <!-- Leadership & Growth -->
-    <section class="mb-16">
-      <h2 class="text-3xl font-bold mb-6 text-purple-400">🚀 Leadership & Growth</h2>
-      <div class="section-card">
-        <div class="flex flex-wrap gap-3">
+    <!-- Leadership Section -->
+    <section id="leadership" class="px-6 py-32">
+      <div class="max-w-7xl mx-auto">
+        <h2 class="text-5xl md:text-6xl font-bold mb-20">
+          Leadership & <span class="text-[var(--accent)]">Delivery</span>
+        </h2>
+        <div class="flex flex-wrap gap-4">
           {leadership.map((item) => (
-            <a href={item.url} target="_blank" rel="noopener noreferrer" class="tech-chip">
+            <a 
+              href={item.url} 
+              target="_blank" 
+              rel="noopener noreferrer"
+              class="tech-tag text-xl px-8 py-4"
+            >
               {item.name}
             </a>
           ))}
@@ -199,274 +371,175 @@ const podcasts = [
       </div>
     </section>
 
-    <!-- Tech Stack Grid -->
-    <div class="grid md:grid-cols-2 gap-8 mb-16">
-      <!-- Cloud -->
-      <section>
-        <h2 class="text-3xl font-bold mb-6 text-cyan-400">☁️ Cloud & Infrastructure</h2>
-        <div class="section-card">
-          <div class="flex flex-wrap gap-3">
-            {cloud.map((item) => (
-              <a href={item.url} target="_blank" rel="noopener noreferrer" class="tech-chip inline-flex items-center gap-2">
-                {item.iconPath && (
-                  <svg viewBox="0 0 24 24" class="w-4 h-4" fill="currentColor">
-                    <path d={item.iconPath}/>
-                  </svg>
-                )}
-                {item.name}
-              </a>
-            ))}
-          </div>
-        </div>
-      </section>
+    <!-- Life Section -->
+    <section id="life" class="min-h-screen px-6 py-32 bg-[var(--bg-secondary)]">
+      <div class="max-w-7xl mx-auto">
+        <h2 class="text-5xl md:text-6xl font-bold mb-20">
+          Beyond <span class="text-[var(--accent)]">Code</span>
+        </h2>
 
-      <!-- API -->
-      <section>
-        <h2 class="text-3xl font-bold mb-6 text-green-400">🔌 API Design</h2>
-        <div class="section-card">
-          <div class="flex flex-wrap gap-3">
-            {api.map((item) => (
-              <a href={item.url} target="_blank" rel="noopener noreferrer" class="tech-chip inline-flex items-center gap-2">
-                {item.iconPath && (
-                  <svg viewBox="0 0 24 24" class="w-4 h-4" fill="currentColor">
-                    <path d={item.iconPath}/>
-                  </svg>
-                )}
-                {item.name}
-              </a>
-            ))}
+        <div class="space-y-16">
+          <!-- Health & Fitness -->
+          <div>
+            <h3 class="text-3xl font-bold mb-6 text-[var(--text-muted)]">Health & Fitness</h3>
+            <div class="flex flex-wrap gap-3">
+              {health.map((item) => (
+                <a 
+                  href={item.url} 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  class="tech-tag"
+                >
+                  {item.name}
+                </a>
+              ))}
+            </div>
           </div>
-        </div>
-      </section>
 
-      <!-- Code -->
-      <section>
-        <h2 class="text-3xl font-bold mb-6 text-yellow-400">💻 Languages & Tools</h2>
-        <div class="section-card">
-          <div class="flex flex-wrap gap-3">
-            {code.map((item) => (
-              <a href={item.url} target="_blank" rel="noopener noreferrer" class="tech-chip inline-flex items-center gap-2">
-                {item.iconPath && (
-                  <svg viewBox="0 0 24 24" class="w-4 h-4" fill="currentColor">
-                    <path d={item.iconPath}/>
-                  </svg>
-                )}
-                {item.name}
-              </a>
-            ))}
+          <!-- Family -->
+          <div>
+            <h3 class="text-3xl font-bold mb-6 text-[var(--text-muted)]">Family & Community</h3>
+            <div class="flex flex-wrap gap-3">
+              {family.map((item) => (
+                <a 
+                  href={item.url} 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  class="tech-tag"
+                >
+                  {item.name}
+                </a>
+              ))}
+            </div>
           </div>
-        </div>
-      </section>
 
-      <!-- Frontend -->
-      <section>
-        <h2 class="text-3xl font-bold mb-6 text-pink-400">🎨 Frontend Frameworks</h2>
-        <div class="section-card">
-          <div class="flex flex-wrap gap-3">
-            {frontend.map((item) => (
-              <a href={item.url} target="_blank" rel="noopener noreferrer" class="tech-chip inline-flex items-center gap-2">
-                {item.iconPath && (
-                  <svg viewBox="0 0 24 24" class="w-4 h-4" fill="currentColor">
-                    <path d={item.iconPath}/>
-                  </svg>
-                )}
-                {item.name}
-              </a>
-            ))}
+          <!-- Smart Home -->
+          <div>
+            <h3 class="text-3xl font-bold mb-6 text-[var(--text-muted)]">Smart Home</h3>
+            <div class="flex flex-wrap gap-3">
+              {interests.map((item) => (
+                <a 
+                  href={item.url} 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  class="tech-tag"
+                >
+                  {item.iconPath && (
+                    <svg viewBox="0 0 24 24" class="w-4 h-4" fill="currentColor">
+                      <path d={item.iconPath}/>
+                    </svg>
+                  )}
+                  {item.name}
+                </a>
+              ))}
+            </div>
           </div>
-        </div>
-      </section>
 
-      <!-- Frameworks -->
-      <section>
-        <h2 class="text-3xl font-bold mb-6 text-orange-400">🏗️ Frameworks & Architecture</h2>
-        <div class="section-card">
-          <div class="flex flex-wrap gap-3">
-            {frameworks.map((item) => (
-              <a href={item.url} target="_blank" rel="noopener noreferrer" class="tech-chip inline-flex items-center gap-2">
-                {item.iconPath && (
-                  <svg viewBox="0 0 24 24" class="w-4 h-4" fill="currentColor">
-                    <path d={item.iconPath}/>
-                  </svg>
-                )}
-                {item.name}
-              </a>
-            ))}
+          <!-- AI -->
+          <div>
+            <h3 class="text-3xl font-bold mb-6 text-[var(--text-muted)]">AI</h3>
+            <div class="flex flex-wrap gap-3">
+              {ai.map((item) => (
+                <a 
+                  href={item.url} 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  class="tech-tag"
+                >
+                  {item.iconPath && (
+                    <svg viewBox="0 0 24 24" class="w-4 h-4" fill="currentColor">
+                      <path d={item.iconPath}/>
+                    </svg>
+                  )}
+                  {item.name}
+                </a>
+              ))}
+            </div>
           </div>
-        </div>
-      </section>
 
-      <!-- Databases -->
-      <section>
-        <h2 class="text-3xl font-bold mb-6 text-red-400">🗄️ Databases</h2>
-        <div class="section-card">
-          <div class="flex flex-wrap gap-3">
-            {databases.map((item) => (
-              <a href={item.url} target="_blank" rel="noopener noreferrer" class="tech-chip inline-flex items-center gap-2">
-                {item.iconPath && (
-                  <svg viewBox="0 0 24 24" class="w-4 h-4" fill="currentColor">
-                    <path d={item.iconPath}/>
-                  </svg>
-                )}
-                {item.name}
-              </a>
-            ))}
+          <!-- Podcasts -->
+          <div>
+            <h3 class="text-3xl font-bold mb-6 text-[var(--text-muted)]">Listening To</h3>
+            <div class="flex flex-wrap gap-3">
+              {podcasts.map((item) => (
+                <a 
+                  href={item.url} 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  class="tech-tag"
+                >
+                  {item.name}
+                </a>
+              ))}
+            </div>
           </div>
         </div>
-      </section>
-
-      <!-- AI -->
-      <section>
-        <h2 class="text-3xl font-bold mb-6 text-sky-400">🤖 AI</h2>
-        <div class="section-card">
-          <div class="flex flex-wrap gap-3">
-            {ai.map((item) => (
-              <a href={item.url} target="_blank" rel="noopener noreferrer" class="tech-chip inline-flex items-center gap-2">
-                {item.iconPath && (
-                  <svg viewBox="0 0 24 24" class="w-4 h-4" fill="currentColor">
-                    <path d={item.iconPath}/>
-                  </svg>
-                )}
-                {item.name}
-              </a>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <!-- Cyber Security -->
-      <section>
-        <h2 class="text-3xl font-bold mb-6 text-amber-400">🔒 Cyber Security</h2>
-        <div class="section-card">
-          <div class="flex flex-wrap gap-3">
-            {cybersecurity.map((item) => (
-              <a href={item.url} target="_blank" rel="noopener noreferrer" class="tech-chip">
-                {item.name}
-              </a>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <!-- Crypto & Prediction Markets -->
-      <section>
-        <h2 class="text-3xl font-bold mb-6 text-teal-400">📈 Crypto & Prediction Markets</h2>
-        <div class="section-card">
-          <div class="flex flex-wrap gap-3">
-            {crypto.map((item) => (
-              <a href={item.url} target="_blank" rel="noopener noreferrer" class="tech-chip">
-                {item.name}
-              </a>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <!-- CMS -->
-      <section>
-        <h2 class="text-3xl font-bold mb-6 text-lime-400">📝 CMS</h2>
-        <div class="section-card">
-          <div class="flex flex-wrap gap-3">
-            {cms.map((item) => (
-              <a href={item.url} target="_blank" rel="noopener noreferrer" class="tech-chip inline-flex items-center gap-2">
-                {item.iconPath && (
-                  <svg viewBox="0 0 24 24" class="w-4 h-4" fill="currentColor">
-                    <path d={item.iconPath}/>
-                  </svg>
-                )}
-                {item.name}
-              </a>
-            ))}
-          </div>
-        </div>
-      </section>
-    </div>
-
-    <!-- Personal Interests Grid -->
-    <div class="grid md:grid-cols-2 gap-8 mb-16">
-      <!-- Interests -->
-      <section>
-        <h2 class="text-3xl font-bold mb-6 text-indigo-400">🏠 Smart Home</h2>
-        <div class="section-card">
-          <div class="flex flex-wrap gap-3">
-            {interests.map((item) => (
-              <a href={item.url} target="_blank" rel="noopener noreferrer" class="tech-chip inline-flex items-center gap-2">
-                {item.iconPath && (
-                  <svg viewBox="0 0 24 24" class="w-4 h-4" fill="currentColor">
-                    <path d={item.iconPath}/>
-                  </svg>
-                )}
-                {item.name}
-              </a>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <!-- Health -->
-      <section>
-        <h2 class="text-3xl font-bold mb-6 text-emerald-400">💪 Health & Fitness</h2>
-        <div class="section-card">
-          <div class="flex flex-wrap gap-3">
-            {health.map((item) => (
-              <a href={item.url} target="_blank" rel="noopener noreferrer" class="tech-chip">
-                {item.name}
-              </a>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <!-- Family -->
-      <section>
-        <h2 class="text-3xl font-bold mb-6 text-rose-400">👨‍👩‍👧‍👦 Family & Community</h2>
-        <div class="section-card">
-          <div class="flex flex-wrap gap-3">
-            {family.map((item) => (
-              <a href={item.url} target="_blank" rel="noopener noreferrer" class="tech-chip">
-                {item.name}
-              </a>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <!-- Podcasts -->
-      <section>
-        <h2 class="text-3xl font-bold mb-6 text-violet-400">🎧 Listening To</h2>
-        <div class="section-card">
-          <div class="flex flex-wrap gap-3">
-            {podcasts.map((item) => (
-              <a href={item.url} target="_blank" rel="noopener noreferrer" class="tech-chip">
-                {item.name}
-              </a>
-            ))}
-          </div>
-        </div>
-      </section>
-    </div>
+      </div>
+    </section>
 
     <!-- Footer -->
-    <footer class="text-center text-gray-500 pt-12 border-t border-gray-800">
-      <p class="mb-2">Built with Astro & Tailwind CSS</p>
-      <p>&copy; {new Date().getFullYear()} Noel Robinson</p>
+    <footer class="px-6 py-12 border-t border-[var(--accent)]/20">
+      <div class="max-w-7xl mx-auto text-center text-[var(--text-dim)]">
+        <p class="mb-2">Built with Astro & Tailwind CSS</p>
+        <p>&copy; {new Date().getFullYear()} Noel Robinson</p>
+      </div>
     </footer>
   </main>
 </Layout>
 
 <style>
-  @keyframes fade-in {
-    from {
-      opacity: 0;
-      transform: translateY(-20px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
+  .tech-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.5rem;
+    background: var(--bg-primary);
+    border: 1px solid transparent;
+    border-radius: 2px;
+    font-weight: 500;
+    transition: all 0.2s ease;
   }
 
-  .animate-fade-in {
-    animation: fade-in 0.8s ease-out;
+  .tech-tag:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+    transform: translateY(-2px);
+  }
+
+  #books .tech-tag,
+  #life .tech-tag {
+    background: var(--bg-secondary);
+  }
+
+  #books .tech-tag:hover,
+  #life .tech-tag:hover {
+    background: var(--bg-primary);
+  }
+
+  /* Smooth scroll offset for fixed nav */
+  section {
+    scroll-margin-top: 80px;
   }
 </style>
+
+<script>
+  // Intersection Observer for fade-in animations
+  const observerOptions = {
+    threshold: 0.1,
+    rootMargin: '0px 0px -50px 0px'
+  };
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('fade-in');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, observerOptions);
+
+  // Observe all sections except hero (which animates on load)
+  document.querySelectorAll('section:not(#hero)').forEach(section => {
+    observer.observe(section);
+  });
+</script>
