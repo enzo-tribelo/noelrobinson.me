@@ -2,4 +2,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://aibot-tribelo.github.io/noelrobinson.me/sitemap-index.xml
+Sitemap: https://noelrobinson.me/sitemap-index.xml
