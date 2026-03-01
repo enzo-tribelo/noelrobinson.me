@@ -65,97 +65,119 @@ const skillGroups = [
 ---
 
 <Layout title="CV — Noel Robinson" description="Noel Robinson CV — Technology Leader with 25+ years in engineering, cloud-native platforms, AI orchestration, and cyber resilience.">
-  <main id="main" class="max-w-5xl mx-auto px-6 sm:px-10 lg:px-16 pt-24 sm:pt-32 pb-24 bg-bg">
+  <main id="main" class="bg-bg min-h-screen">
 
-    <!-- Header -->
-    <div class="mb-14">
-      <div class="flex items-center justify-between mb-8">
-        <a href="/" class="font-['JetBrains_Mono'] text-xs text-text-muted hover:text-accent transition-colors">← Back</a>
-        <button onclick="window.print()" class="font-['JetBrains_Mono'] text-xs text-text-muted hover:text-accent transition-colors cursor-pointer flex items-center gap-1.5 print:hidden">
-          <svg viewBox="0 0 20 20" fill="currentColor" class="w-3.5 h-3.5"><path fill-rule="evenodd" d="M4.5 2A1.5 1.5 0 003 3.5v2.879a2.5 2.5 0 00-1 2V12a2 2 0 002 2h1v1.5A1.5 1.5 0 006.5 17h7a1.5 1.5 0 001.5-1.5V14h1a2 2 0 002-2V8.379a2.5 2.5 0 00-1-2V3.5A1.5 1.5 0 0014.5 2h-10zM14 6.5V3.5a.5.5 0 00-.5-.5h-7a.5.5 0 00-.5.5v3h8zM6 14v1.5a.5.5 0 00.5.5h7a.5.5 0 00.5-.5V12H6v2z" clip-rule="evenodd"/></svg>
-          Download PDF
-        </button>
+    <!-- Hero header -->
+    <section class="relative overflow-hidden">
+      <div class="absolute inset-0 bg-gradient-to-b from-accent/5 to-transparent pointer-events-none"></div>
+      <div class="relative max-w-7xl mx-auto px-6 sm:px-10 lg:px-16 pt-24 sm:pt-32 pb-16">
+        <div class="flex items-center justify-between mb-10">
+          <a href="/" class="font-['JetBrains_Mono'] text-xs text-text-muted hover:text-accent transition-colors">← Back</a>
+          <button onclick="window.print()" class="font-['JetBrains_Mono'] text-xs text-text-muted hover:text-accent transition-colors cursor-pointer flex items-center gap-1.5 print:hidden">
+            <svg viewBox="0 0 20 20" fill="currentColor" class="w-3.5 h-3.5"><path fill-rule="evenodd" d="M4.5 2A1.5 1.5 0 003 3.5v2.879a2.5 2.5 0 00-1 2V12a2 2 0 002 2h1v1.5A1.5 1.5 0 006.5 17h7a1.5 1.5 0 001.5-1.5V14h1a2 2 0 002-2V8.379a2.5 2.5 0 00-1-2V3.5A1.5 1.5 0 0014.5 2h-10zM14 6.5V3.5a.5.5 0 00-.5-.5h-7a.5.5 0 00-.5.5v3h8zM6 14v1.5a.5.5 0 00.5.5h7a.5.5 0 00.5-.5V12H6v2z" clip-rule="evenodd"/></svg>
+            Download PDF
+          </button>
+        </div>
+        <div class="grid lg:grid-cols-[1fr_auto] gap-8 items-end">
+          <div>
+            <h1 class="font-['Bebas_Neue'] text-6xl sm:text-7xl lg:text-8xl text-white tracking-wide mb-3">Noel Robinson</h1>
+            <p class="font-['JetBrains_Mono'] text-accent text-xs uppercase tracking-[0.2em] mb-6">Technology Leader · 25+ years</p>
+            <p class="text-sm text-text-muted leading-relaxed font-['Inter'] max-w-2xl">
+              Hands-on technology leader building high-performing teams and enterprise platforms. Deep expertise in cloud-native architecture, cyber resilience, AI orchestration, and DevOps. Currently focused on multi-agent AI systems and algorithmic trading.
+            </p>
+          </div>
+          <div class="flex flex-wrap lg:flex-col gap-x-5 gap-y-2">
+            <a href="https://www.linkedin.com/in/noelarobinson/" target="_blank" rel="noopener noreferrer" class="font-['JetBrains_Mono'] text-xs text-text-muted hover:text-accent transition-colors">LinkedIn ↗</a>
+            <a href="https://github.com/pittdog" target="_blank" rel="noopener noreferrer" class="font-['JetBrains_Mono'] text-xs text-text-muted hover:text-accent transition-colors">GitHub ↗</a>
+            <a href="https://noelrobinson.me" class="font-['JetBrains_Mono'] text-xs text-text-muted hover:text-accent transition-colors">noelrobinson.me</a>
+            <span class="font-['JetBrains_Mono'] text-xs text-text-muted">noel@tribelo.co.uk</span>
+          </div>
+        </div>
       </div>
-      <h1 class="font-['Bebas_Neue'] text-5xl sm:text-6xl text-white tracking-wide mb-2">Noel Robinson</h1>
-      <p class="font-['JetBrains_Mono'] text-accent text-xs uppercase tracking-[0.2em] mb-5">Technology Leader · 25+ years</p>
-      <p class="text-sm text-text-muted leading-relaxed max-w-3xl font-['Inter']">
-        Hands-on technology leader building high-performing teams and enterprise platforms. Deep expertise in cloud-native architecture, cyber resilience, AI orchestration, and DevOps. Currently focused on multi-agent AI systems and algorithmic trading.
-      </p>
-      <div class="flex flex-wrap gap-x-5 gap-y-1 mt-5">
-        <a href="https://www.linkedin.com/in/noelarobinson/" target="_blank" rel="noopener noreferrer" class="font-['JetBrains_Mono'] text-xs text-text-muted hover:text-accent transition-colors">LinkedIn</a>
-        <a href="https://github.com/pittdog" target="_blank" rel="noopener noreferrer" class="font-['JetBrains_Mono'] text-xs text-text-muted hover:text-accent transition-colors">GitHub</a>
-        <a href="https://noelrobinson.me" class="font-['JetBrains_Mono'] text-xs text-text-muted hover:text-accent transition-colors">noelrobinson.me</a>
-        <span class="font-['JetBrains_Mono'] text-xs text-text-muted">noel@tribelo.co.uk</span>
-      </div>
-    </div>
+    </section>
 
     <!-- Skills -->
-    <section class="mb-14">
-      <div class="flex items-center gap-4 mb-8">
-        <span class="font-['JetBrains_Mono'] text-accent text-xs tracking-[0.2em]">01</span>
-        <div class="flex-1 h-px bg-border"></div>
-        <h2 class="font-['Bebas_Neue'] text-2xl text-white tracking-wide">Skills</h2>
-      </div>
-      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-        {skillGroups.map(group => (
-          <div>
-            <h3 class="font-['JetBrains_Mono'] text-[10px] text-accent uppercase tracking-widest mb-2">{group.title}</h3>
-            <div class="flex flex-wrap gap-1.5">
-              {group.tags.map(tag => (
-                <span class="px-2.5 py-1 text-xs text-text bg-surface rounded-sm font-['Inter']">{tag}</span>
-              ))}
+    <section class="border-t border-border">
+      <div class="max-w-7xl mx-auto px-6 sm:px-10 lg:px-16 py-16">
+        <div class="flex items-center gap-4 mb-10">
+          <span class="font-['JetBrains_Mono'] text-accent text-xs tracking-[0.2em]">01</span>
+          <h2 class="font-['Bebas_Neue'] text-3xl text-white tracking-wide">Skills</h2>
+          <div class="flex-1 h-px bg-border"></div>
+        </div>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
+          {skillGroups.map(group => (
+            <div>
+              <h3 class="font-['JetBrains_Mono'] text-[10px] text-accent uppercase tracking-widest mb-3">{group.title}</h3>
+              <div class="flex flex-wrap gap-1.5">
+                {group.tags.map(tag => (
+                  <span class="px-2.5 py-1 text-xs text-text bg-surface rounded-sm font-['Inter']">{tag}</span>
+                ))}
+              </div>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
     </section>
 
     <!-- Experience -->
-    <section class="mb-14">
-      <div class="flex items-center gap-4 mb-8">
-        <span class="font-['JetBrains_Mono'] text-accent text-xs tracking-[0.2em]">02</span>
-        <div class="flex-1 h-px bg-border"></div>
-        <h2 class="font-['Bebas_Neue'] text-2xl text-white tracking-wide">Experience</h2>
-      </div>
-      <div class="space-y-12">
-        {experience.map(job => (
-          <div class="grid lg:grid-cols-[280px_1fr] gap-4 lg:gap-10">
-            <div class="lg:sticky lg:top-24 lg:self-start">
-              <h3 class="text-base font-semibold text-white font-['Inter'] mb-1">{job.role}</h3>
-              {job.url ? (
-                <a href={job.url} target="_blank" rel="noopener noreferrer" class="text-sm text-text-muted hover:text-accent transition-colors font-['Inter'] block">{job.company}</a>
-              ) : (
-                <p class="text-sm text-text-muted font-['Inter']">{job.company}</p>
-              )}
-              <span class="font-['JetBrains_Mono'] text-[10px] text-text-muted mt-1 block">{job.period}</span>
+    <section class="border-t border-border">
+      <div class="max-w-7xl mx-auto px-6 sm:px-10 lg:px-16 py-16">
+        <div class="flex items-center gap-4 mb-12">
+          <span class="font-['JetBrains_Mono'] text-accent text-xs tracking-[0.2em]">02</span>
+          <h2 class="font-['Bebas_Neue'] text-3xl text-white tracking-wide">Experience</h2>
+          <div class="flex-1 h-px bg-border"></div>
+        </div>
+        <div class="space-y-16">
+          {experience.map(job => (
+            <div class="grid lg:grid-cols-[300px_1fr] gap-6 lg:gap-16">
+              <div>
+                <span class="font-['JetBrains_Mono'] text-[10px] text-accent tracking-widest block mb-2">{job.period}</span>
+                <h3 class="text-lg font-semibold text-white font-['Inter'] mb-1">{job.role}</h3>
+                {job.url ? (
+                  <a href={job.url} target="_blank" rel="noopener noreferrer" class="text-sm text-text-muted hover:text-accent transition-colors font-['Inter']">{job.company} ↗</a>
+                ) : (
+                  <p class="text-sm text-text-muted font-['Inter']">{job.company}</p>
+                )}
+              </div>
+              <ul class="space-y-2">
+                {job.highlights.map(h => (
+                  <li class="text-sm text-text flex gap-3 leading-relaxed font-['Inter']">
+                    <span class="text-accent shrink-0 mt-1 w-1 h-1 rounded-full bg-accent/50"></span>
+                    <span>{h}</span>
+                  </li>
+                ))}
+              </ul>
             </div>
-            <ul class="space-y-1.5">
-              {job.highlights.map(h => (
-                <li class="text-sm text-text flex gap-2 leading-relaxed font-['Inter']">
-                  <span class="text-accent/40 shrink-0 mt-0.5">•</span>
-                  <span>{h}</span>
-                </li>
-              ))}
-            </ul>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
     </section>
 
     <!-- Education -->
-    <section class="mb-14">
-      <div class="flex items-center gap-4 mb-8">
-        <span class="font-['JetBrains_Mono'] text-accent text-xs tracking-[0.2em]">03</span>
-        <div class="flex-1 h-px bg-border"></div>
-        <h2 class="font-['Bebas_Neue'] text-2xl text-white tracking-wide">Education</h2>
+    <section class="border-t border-border">
+      <div class="max-w-7xl mx-auto px-6 sm:px-10 lg:px-16 py-16">
+        <div class="flex items-center gap-4 mb-10">
+          <span class="font-['JetBrains_Mono'] text-accent text-xs tracking-[0.2em]">03</span>
+          <h2 class="font-['Bebas_Neue'] text-3xl text-white tracking-wide">Education</h2>
+          <div class="flex-1 h-px bg-border"></div>
+        </div>
+        <div class="grid lg:grid-cols-[300px_1fr] gap-6 lg:gap-16">
+          <div>
+            <span class="font-['JetBrains_Mono'] text-[10px] text-accent tracking-widest">Qualifications</span>
+          </div>
+          <div class="space-y-2">
+            <p class="text-sm text-text font-['Inter']">A Levels: Computer Science, Economics, Religious Studies</p>
+            <p class="text-sm text-text font-['Inter']">Core Spring 2.5 — Skills Matter (Spring Source)</p>
+          </div>
+        </div>
       </div>
-      <p class="text-sm text-text font-['Inter']">A Levels: Computer Science, Economics, Religious Studies</p>
-      <p class="text-sm text-text font-['Inter']">Core Spring 2.5 — Skills Matter (Spring Source)</p>
     </section>
 
     <!-- Footer -->
-    <footer class="pt-6 border-t border-border font-['JetBrains_Mono'] text-[10px] text-text-muted print:hidden">
-      References available on request
+    <footer class="border-t border-border print:hidden">
+      <div class="max-w-7xl mx-auto px-6 sm:px-10 lg:px-16 py-8">
+        <p class="font-['JetBrains_Mono'] text-[10px] text-text-muted">References available on request</p>
+      </div>
     </footer>
 
   </main>
@@ -164,13 +186,14 @@ const skillGroups = [
 <style>
   @media print {
     body { background: white !important; color: #111 !important; font-size: 11px !important; }
-    main { padding-top: 0 !important; max-width: 100% !important; padding-inline: 1cm !important; background: white !important; }
-    h1 { color: #000 !important; font-size: 24px !important; }
-    h2 { color: #000 !important; }
+    main { background: white !important; }
+    section { border-color: #ddd !important; }
+    h1 { color: #000 !important; font-size: 28px !important; }
+    h2 { color: #000 !important; font-size: 18px !important; }
     h3 { color: #111 !important; }
     p, li, span, a { color: #333 !important; }
     .bg-surface { background: #f0f0f0 !important; color: #333 !important; }
-    .text-accent { color: #333 !important; }
+    .text-accent, .bg-accent\/5 { color: #555 !important; background: transparent !important; }
     a { text-decoration: none !important; }
     nav, .print\:hidden { display: none !important; }
   }
