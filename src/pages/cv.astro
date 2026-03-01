@@ -3,44 +3,77 @@ import Layout from '../layouts/Layout.astro';
 
 const experience = [
   {
-    role: 'Head of Engineering',
+    role: 'Founder & Technology Consultant',
     company: 'Tribelo',
     url: 'https://www.tribelo.co.uk',
     period: '2019 — Present',
-    summary: 'Technology consultancy delivering cloud-native platforms, AI orchestration, and engineering leadership for clients across fintech, media, and e-commerce.',
+    summary: 'Technology consultancy delivering cloud-native platforms, AI orchestration, and engineering leadership.',
     highlights: [
-      'Built and led distributed engineering teams across multiple client engagements',
-      'Architected multi-tenant streaming platforms serving 4 domains from a single deployment',
-      'Designed AI-powered autonomous agent workflows using Claude, Bedrock, and OpenClaw',
-      'Delivered cloud migrations and DevOps transformations on AWS and Azure',
+      'Architected multi-tenant streaming platforms serving multiple domains from a single deployment (Next.js, Vercel, Tailwind)',
+      'Designed AI-powered autonomous agent workflows using Claude, Amazon Bedrock, and OpenClaw',
+      'Built algorithmic trading systems integrating Binance and Polymarket APIs',
+      'Delivered energy and smart home integrations (Tesla, Octopus Energy, SolaX Cloud, Home Assistant)',
+      'Developed and launched multiple consumer web products — AllStreams.gg, EASportsFC.tv, RocketLeague.tv, and more',
     ],
   },
   {
-    role: 'Engineering Manager / Principal Engineer',
-    company: 'Previous Roles',
-    period: 'Prior to 2019',
-    summary: 'Progressive engineering leadership across enterprise and startup environments, specialising in platform engineering, API design, and frontend architecture.',
+    role: 'Principal Developer',
+    company: 'National Trust',
+    period: '2014 — 2019',
+    summary: 'Technical lead across internal teams and external partners, delivering the Trust\'s digital services platform.',
     highlights: [
-      'Led adoption of Kubernetes, CI/CD pipelines, and infrastructure-as-code',
-      'Championed micro frontend architecture and module federation at scale',
-      'Delivered RESTful and GraphQL APIs serving millions of requests',
-      'Mentored engineering teams and introduced agile/DevOps practices',
+      'Led platform re-architecture — migrated EC2 services to containerised Kotlin, Java and Node SSR on Kubernetes (EKS)',
+      'Designed and implemented GitOps CD pipelines using FluxCD and Jenkins',
+      'Introduced GraphQL federated gateway integrating with existing REST micro-service estate',
+      'Built user generated content platform using Spring Boot, Docker, DynamoDB, SQS and Vue.js SPA',
+      'Delivered Single Sign-On (OAuth2) across all web and mobile applications',
+      'Championed continuous delivery, fundamentally changing how the team shipped software',
+      'Introduced Kotlin to the development teams, improving delivery speed and developer experience',
+      'Led website re-design — new CMS, APIs, ETLs, event-driven microservices on AWS',
+      'Delivered website search using Elasticsearch with Google Maps API integration',
+    ],
+  },
+  {
+    role: 'Senior Agile Java Developer',
+    company: 'Which? (via Mosaic Island)',
+    period: '2012 — 2014',
+    summary: 'Lead developer on customer management and billing transformation for the UK\'s largest consumer association.',
+    highlights: [
+      'Led greenfield project growing team to ten — introduced TDD, CI, and agile best practices',
+      'Delivered customer management renewal programme integrating with SOA architecture',
+      'Built visitor attraction data pipeline consolidating multiple legacy sources',
+      'Implemented VAT invoicing system using Spring Batch and new web services',
+    ],
+  },
+  {
+    role: 'Java Designer / Developer → Senior Developer',
+    company: 'Virgin Media / Virgin Mobile',
+    period: '2000 — 2011',
+    summary: '11 years progressing from IVR developer to senior designer/developer across Virgin\'s consumer platforms.',
+    highlights: [
+      'Subject matter expert for retail stores web application and SOA payment/billing systems',
+      'Delivered EU Data Roaming regulations, PCI compliance, and B2B reverse logistics',
+      'Built SOA architecture for billing, customer management, and fraud systems',
+      'Progressed through IVR Developer → Senior IVR Developer → Web Developer → Java Designer/Developer',
     ],
   },
 ];
 
 const skills = {
-  'AI & Automation': ['Claude / Anthropic', 'OpenClaw', 'Amazon Bedrock', 'Multi-Agent Systems', 'OpenAI', 'LLM Tooling', 'ElevenLabs'],
-  'Cloud & DevOps': ['AWS (Lambda, Fargate, SES, Amplify, Route 53)', 'Azure', 'Vercel', 'Kubernetes', 'Docker', 'FluxCD', 'GitHub Actions', 'CI/CD'],
-  'Languages': ['TypeScript', 'JavaScript', 'Python', 'Kotlin', 'Java'],
-  'Frontend': ['React', 'Next.js', 'Vue.js', 'Astro', 'Tailwind CSS', 'Gatsby', 'Hugo'],
-  'Architecture': ['REST APIs', 'GraphQL', 'Micro Front Ends', 'Module Federation', 'OIDC', 'Event-Driven', 'Serverless'],
-  'Data': ['PostgreSQL', 'Supabase', 'MongoDB', 'Elasticsearch', 'DynamoDB'],
-  'Leadership': ['Agile / Scrum', 'DevOps Culture', 'Team Building', 'Technical Strategy', 'Stakeholder Management'],
+  'AI & Automation': ['Claude / Anthropic', 'OpenClaw', 'Amazon Bedrock', 'Multi-Agent Systems', 'OpenAI', 'Whisper', 'ElevenLabs', 'LLM Tooling'],
+  'Cloud & DevOps': ['AWS (Lambda, Fargate, EKS, SES, SQS, Amplify, Route 53)', 'Azure', 'Vercel', 'Kubernetes', 'Docker', 'FluxCD', 'GitOps / Helm', 'Jenkins', 'GitHub Actions', 'Hashicorp Vault'],
+  'Languages': ['TypeScript', 'JavaScript', 'Python', 'Kotlin', 'Java 8–21'],
+  'Frontend': ['React', 'Next.js', 'Vue.js', 'Astro', 'Tailwind CSS', 'Storybook', 'Micro Frontends', 'Module Federation'],
+  'Architecture': ['REST APIs', 'GraphQL (Federated)', 'Microservices / SOA', 'Event-Driven', 'Serverless', 'OAuth2 / OIDC / JWT', 'Spring Boot / Spring Cloud'],
+  'Data': ['PostgreSQL', 'Supabase', 'MongoDB', 'Elasticsearch', 'DynamoDB', 'Redis'],
+  'Testing': ['TDD', 'Cypress', 'Selenium', 'JUnit', 'Mockito', 'Cucumber', 'REST Assured', 'Kotest'],
+  'Leadership': ['Digital Transformation', 'Agile / Scrum / Kanban', 'Team Building & Mentoring', 'Technical Strategy', 'Cloud Migration', 'Legacy Modernisation'],
 };
 
 const education = [
-  { what: 'Computer Science', where: 'University', period: '' },
+  'A Levels: Computer Science, Economics, Religious Studies',
+  '10 GCSEs',
+  'Core Spring 2.5 — Skills Matter (Spring Source)',
 ];
 ---
 
@@ -51,14 +84,15 @@ const education = [
     <div class="mb-16">
       <a href="/" class="text-xs text-[#666] hover:text-white transition-colors mb-6 inline-block">← Back</a>
       <h1 class="text-3xl sm:text-4xl font-bold text-white mb-2">Noel Robinson</h1>
-      <p class="text-lg text-[#999] mb-4">Tech Leader & Engineer</p>
+      <p class="text-lg text-[#999] mb-4">Technology Leader</p>
       <p class="text-sm text-[#888] leading-relaxed max-w-2xl">
-        Experienced engineering leader with deep expertise in cloud-native architecture, AI orchestration, and building high-performing teams. Passionate about DevOps, evolutionary architecture, and shipping products that matter.
+        Passionate and hands-on technology leader with 25+ years of experience building high-performing engineering teams and delivering enterprise platforms. Deep expertise in cloud-native architecture, AI orchestration, DevOps, and modern frontend development. Currently focused on multi-agent AI systems, autonomous workflows, and algorithmic trading.
       </p>
-      <div class="flex gap-6 mt-6 text-sm">
+      <div class="flex flex-wrap gap-x-6 gap-y-2 mt-6 text-sm">
         <a href="https://www.linkedin.com/in/noelarobinson/" target="_blank" rel="noopener noreferrer" class="text-[#888] hover:text-white transition-colors">LinkedIn</a>
         <a href="https://github.com/pittdog" target="_blank" rel="noopener noreferrer" class="text-[#888] hover:text-white transition-colors">GitHub</a>
         <a href="https://noelrobinson.me" class="text-[#888] hover:text-white transition-colors">noelrobinson.me</a>
+        <span class="text-[#888]">noel@tribelo.co.uk</span>
       </div>
     </div>
 
@@ -68,8 +102,8 @@ const education = [
       <div class="space-y-12">
         {experience.map(job => (
           <div>
-            <div class="flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-1 mb-2">
-              <h3 class="text-lg font-semibold text-white">{job.role}</h3>
+            <div class="flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-1 mb-1">
+              <h3 class="text-base sm:text-lg font-semibold text-white">{job.role}</h3>
               <span class="text-xs text-[#888] font-mono shrink-0">{job.period}</span>
             </div>
             {job.url ? (
@@ -82,7 +116,7 @@ const education = [
               {job.highlights.map(h => (
                 <li class="text-sm text-[#999] flex gap-2">
                   <span class="text-[#888] shrink-0">·</span>
-                  {h}
+                  <span>{h}</span>
                 </li>
               ))}
             </ul>
@@ -94,12 +128,22 @@ const education = [
     <!-- Skills -->
     <section class="mb-16">
       <h2 class="text-xs font-semibold uppercase tracking-widest text-[#999] mb-8">Skills</h2>
-      <div class="space-y-6">
+      <div class="space-y-5">
         {Object.entries(skills).map(([category, items]) => (
           <div>
-            <h3 class="text-sm font-medium text-white mb-2">{category}</h3>
+            <h3 class="text-sm font-medium text-white mb-1.5">{category}</h3>
             <p class="text-sm text-[#888] leading-relaxed">{items.join(' · ')}</p>
           </div>
+        ))}
+      </div>
+    </section>
+
+    <!-- Education -->
+    <section class="mb-16">
+      <h2 class="text-xs font-semibold uppercase tracking-widest text-[#999] mb-8">Education</h2>
+      <div class="space-y-2">
+        {education.map(e => (
+          <p class="text-sm text-[#999]">{e}</p>
         ))}
       </div>
     </section>
