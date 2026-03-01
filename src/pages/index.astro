@@ -146,24 +146,34 @@ const lifeGroups = [
 ---
 
 <Layout title="Noel Robinson — Tech Leader & Engineer">
-  <!-- Nav -->
-  <nav class="fixed top-0 left-0 right-0 z-50 bg-[#0c0c0c]/90 backdrop-blur-md">
+  <!-- Desktop Nav (top) -->
+  <nav class="hidden sm:block fixed top-0 left-0 right-0 z-50 bg-[#0c0c0c]/90 backdrop-blur-md">
     <div class="max-w-5xl mx-auto px-6 h-14 flex items-center justify-between">
       <a href="#" class="text-white font-semibold text-sm tracking-wide">NR</a>
-      <div class="flex items-center gap-5 sm:gap-8">
-        <a href="#tech" class="text-xs sm:text-sm text-[#888] hover:text-white transition-colors">Tech</a>
-        <a href="#projects" class="text-xs sm:text-sm text-[#888] hover:text-white transition-colors">Projects</a>
-        <a href="#books" class="text-xs sm:text-sm text-[#888] hover:text-white transition-colors">Books</a>
-        <a href="#leadership" class="hidden sm:inline text-sm text-[#888] hover:text-white transition-colors">Leadership</a>
-        <a href="#life" class="text-xs sm:text-sm text-[#888] hover:text-white transition-colors">Life</a>
+      <div class="flex items-center gap-8">
+        <a href="#tech" class="text-sm text-[#888] hover:text-white transition-colors">Tech</a>
+        <a href="#projects" class="text-sm text-[#888] hover:text-white transition-colors">Projects</a>
+        <a href="#books" class="text-sm text-[#888] hover:text-white transition-colors">Books</a>
+        <a href="#leadership" class="text-sm text-[#888] hover:text-white transition-colors">Leadership</a>
+        <a href="#life" class="text-sm text-[#888] hover:text-white transition-colors">Life</a>
       </div>
     </div>
   </nav>
 
-  <main id="main-content" class="max-w-5xl mx-auto px-6 scroll-smooth">
+  <!-- Mobile Nav (bottom) -->
+  <nav class="sm:hidden fixed bottom-0 left-0 right-0 z-50 bg-[#0c0c0c]/95 backdrop-blur-md border-t border-[#1e1e1e]" style="padding-bottom: env(safe-area-inset-bottom)">
+    <div class="flex items-center justify-around h-12">
+      <a href="#tech" class="text-xs text-[#888] hover:text-white transition-colors">Tech</a>
+      <a href="#projects" class="text-xs text-[#888] hover:text-white transition-colors">Projects</a>
+      <a href="#books" class="text-xs text-[#888] hover:text-white transition-colors">Books</a>
+      <a href="#life" class="text-xs text-[#888] hover:text-white transition-colors">Life</a>
+    </div>
+  </nav>
+
+  <main id="main-content" class="max-w-5xl mx-auto px-6 scroll-smooth pb-16 sm:pb-0">
 
     <!-- Hero -->
-    <section class="pt-32 pb-24 sm:pt-40 sm:pb-32">
+    <section class="pt-16 pb-24 sm:pt-40 sm:pb-32">
       <p class="text-sm font-medium text-[#999] uppercase tracking-widest mb-4">Tech Leader & Engineer</p>
       <h1 class="text-4xl sm:text-6xl lg:text-7xl font-bold text-white leading-[1.1] mb-6">
         Noel Robinson
