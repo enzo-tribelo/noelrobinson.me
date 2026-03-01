@@ -92,6 +92,17 @@ const books = [
   { name: 'Blockchain Revolution', url: 'https://amazon.co.uk/gp/product/1101980141' },
 ];
 
+const projects = [
+  { name: 'AllStreams.gg', url: 'https://www.allstreams.gg', desc: 'Live streaming aggregator across Twitch & Kick' },
+  { name: 'EA Sports FC TV', url: 'https://www.easportsfc.tv', desc: 'Live EA Sports FC streams' },
+  { name: 'Rocket League TV', url: 'https://www.rocketleague.tv', desc: 'Live Rocket League streams' },
+  { name: 'GTA Roleplay TV', url: 'https://www.gtaroleplay.tv', desc: 'Live GTA RP streams' },
+  { name: 'VALORANT Live', url: 'https://www.valolive.tv', desc: 'Live VALORANT streams' },
+  { name: 'TrustedClient', url: 'https://www.trustedclient.co.uk', desc: 'UK business payment trust platform' },
+  { name: 'On Autopilot', url: 'https://www.onautopilot.co.uk', desc: 'AI assistant as a service' },
+  { name: "Helen's Kitchen", url: 'https://helens.kitchen', desc: 'Family recipe blog & CMS' },
+];
+
 const leadership = [
   { name: 'Agile Manifesto', url: 'https://agilemanifesto.org/' },
   { name: 'DevOps', url: 'https://aws.amazon.com/devops/what-is-devops/' },
@@ -140,6 +151,7 @@ const lifeGroups = [
     <div class="max-w-5xl mx-auto px-6 h-14 flex items-center justify-between">
       <a href="#" class="text-white font-semibold text-sm tracking-wide">Noel Robinson</a>
       <div class="hidden sm:flex items-center gap-8">
+        <a href="#projects" class="text-sm text-[#888] hover:text-white transition-colors">Projects</a>
         <a href="#tech" class="text-sm text-[#888] hover:text-white transition-colors">Tech</a>
         <a href="#books" class="text-sm text-[#888] hover:text-white transition-colors">Books</a>
         <a href="#leadership" class="text-sm text-[#888] hover:text-white transition-colors">Leadership</a>
@@ -165,6 +177,27 @@ const lifeGroups = [
             <svg viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5">
               <path d={s.path}/>
             </svg>
+          </a>
+        ))}
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects" class="pb-24 scroll-mt-20">
+      <h2 class="text-2xl sm:text-3xl font-bold text-white mb-12">Projects</h2>
+      <div class="grid sm:grid-cols-2 gap-4">
+        {projects.map(p => (
+          <a
+            href={p.url}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="group p-5 rounded-lg bg-[#161616] hover:bg-[#1e1e1e] transition-all"
+          >
+            <div class="flex items-center justify-between mb-1.5">
+              <span class="text-sm font-semibold text-white">{p.name}</span>
+              <span class="text-xs text-[#333] group-hover:text-[#666] transition-colors">↗</span>
+            </div>
+            <p class="text-xs text-[#666]">{p.desc}</p>
           </a>
         ))}
       </div>
