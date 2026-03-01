@@ -194,7 +194,7 @@ const navItems = [
           {[{ v: '25+', l: 'Years' }, { v: '9', l: 'Products' }, { v: '∞', l: 'Curiosity' }].map(s => (
             <div class="text-center">
               <div class="font-['Bebas_Neue'] text-3xl sm:text-4xl text-white">{s.v}</div>
-              <div class="font-['JetBrains_Mono'] text-[10px] text-text-muted uppercase tracking-widest">{s.l}</div>
+              <div class="font-['JetBrains_Mono'] text-xs text-text-muted uppercase tracking-widest">{s.l}</div>
             </div>
           ))}
         </div>
@@ -205,7 +205,7 @@ const navItems = [
             <svg viewBox="0 0 24 24" fill="currentColor" class="w-4 h-4"><path d={s.path}/></svg>
           </a>
         ))}
-        <span class="ml-auto font-['JetBrains_Mono'] text-[10px] text-text-muted tracking-widest hidden sm:block">SCROLL ↓</span>
+        <span class="ml-auto font-['JetBrains_Mono'] text-xs text-text-muted tracking-widest hidden sm:block">SCROLL ↓</span>
       </div>
     </div>
     <div class="absolute bottom-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-accent/40 to-transparent"></div>
@@ -223,7 +223,7 @@ const navItems = [
       <div class="space-y-10">
         {techGroups.map(group => (
           <div>
-            <h3 class="font-['JetBrains_Mono'] text-[10px] text-accent uppercase tracking-widest mb-4">{group.title}</h3>
+            <h3 class="font-['JetBrains_Mono'] text-xs text-accent uppercase tracking-widest mb-4">{group.title}</h3>
             <div class="flex flex-wrap gap-2">
               {group.items.map(item => (
                 <a href={item.u} target="_blank" rel="noopener noreferrer"
@@ -252,7 +252,7 @@ const navItems = [
         {projects.map(p => (
           <a href={p.url} target="_blank" rel="noopener noreferrer"
              class="group p-6 bg-bg rounded-sm border border-transparent hover:border-accent/20 transition-all">
-            <span class="font-['JetBrains_Mono'] text-[10px] text-accent uppercase tracking-widest block mb-2">{p.tag}</span>
+            <span class="font-['JetBrains_Mono'] text-xs text-accent uppercase tracking-widest block mb-2">{p.tag}</span>
             <div class="flex items-center justify-between">
               <h3 class="text-base font-semibold text-white font-['Inter'] group-hover:text-accent transition-colors">{p.name}</h3>
               <span class="text-text-muted group-hover:text-accent transition-colors text-sm">↗</span>
@@ -276,7 +276,7 @@ const navItems = [
         {books.map((book, i) => (
           <a href={book.url} target="_blank" rel="noopener noreferrer"
              class="group flex items-center gap-3 py-3.5 border-b border-border hover:pl-2 transition-all">
-            <span class="font-['JetBrains_Mono'] text-[10px] text-text-muted w-5 shrink-0">{String(i + 1).padStart(2, '0')}</span>
+            <span class="font-['JetBrains_Mono'] text-xs text-text-muted w-5 shrink-0">{String(i + 1).padStart(2, '0')}</span>
             <span class="text-sm font-medium text-text group-hover:text-accent transition-colors font-['Inter'] flex-1">{book.name}</span>
             <span class="text-xs text-text-muted group-hover:text-accent transition-colors">↗</span>
           </a>
@@ -348,7 +348,7 @@ const navItems = [
       <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-12">
         {lifeGroups.map(group => (
           <div>
-            <h3 class="font-['JetBrains_Mono'] text-[10px] text-accent uppercase tracking-widest mb-4">{group.title}</h3>
+            <h3 class="font-['JetBrains_Mono'] text-xs text-accent uppercase tracking-widest mb-4">{group.title}</h3>
             <div class="space-y-2">
               {group.items.map(item => (
                 <a href={item.u} target="_blank" rel="noopener noreferrer"
@@ -379,7 +379,7 @@ const navItems = [
           </a>
         ))}
       </div>
-      <span class="font-['JetBrains_Mono'] text-[10px] text-text-muted">&copy; {new Date().getFullYear()}</span>
+      <span class="font-['JetBrains_Mono'] text-xs text-text-muted">&copy; {new Date().getFullYear()}</span>
     </div>
   </footer>
 

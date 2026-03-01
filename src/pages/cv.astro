@@ -107,7 +107,7 @@ const skillGroups = [
         <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
           {skillGroups.map(group => (
             <div>
-              <h3 class="font-['JetBrains_Mono'] text-[10px] text-accent uppercase tracking-widest mb-3">{group.title}</h3>
+              <h3 class="font-['JetBrains_Mono'] text-xs text-accent uppercase tracking-widest mb-3">{group.title}</h3>
               <div class="flex flex-wrap gap-1.5">
                 {group.tags.map(tag => (
                   <span class="px-2.5 py-1 text-xs text-text bg-surface rounded-sm font-['Inter']">{tag}</span>
@@ -131,7 +131,7 @@ const skillGroups = [
           {experience.map(job => (
             <div class="grid lg:grid-cols-[300px_1fr] gap-6 lg:gap-16">
               <div>
-                <span class="font-['JetBrains_Mono'] text-[10px] text-accent tracking-widest block mb-2">{job.period}</span>
+                <span class="font-['JetBrains_Mono'] text-xs text-accent tracking-widest block mb-2">{job.period}</span>
                 <h3 class="text-lg font-semibold text-white font-['Inter'] mb-1">{job.role}</h3>
                 {job.url ? (
                   <a href={job.url} target="_blank" rel="noopener noreferrer" class="text-sm text-text-muted hover:text-accent transition-colors font-['Inter']">{job.company} ↗</a>
@@ -163,7 +163,7 @@ const skillGroups = [
         </div>
         <div class="grid lg:grid-cols-[300px_1fr] gap-6 lg:gap-16">
           <div>
-            <span class="font-['JetBrains_Mono'] text-[10px] text-accent tracking-widest">Qualifications</span>
+            <span class="font-['JetBrains_Mono'] text-xs text-accent tracking-widest">Qualifications</span>
           </div>
           <div class="space-y-2">
             <p class="text-sm text-text font-['Inter']">A Levels: Computer Science, Economics, Religious Studies</p>
@@ -176,7 +176,7 @@ const skillGroups = [
     <!-- Footer -->
     <footer class="border-t border-border print:hidden">
       <div class="max-w-7xl mx-auto px-6 sm:px-10 lg:px-16 py-8">
-        <p class="font-['JetBrains_Mono'] text-[10px] text-text-muted">References available on request</p>
+        <p class="font-['JetBrains_Mono'] text-xs text-text-muted">References available on request</p>
       </div>
     </footer>
 
