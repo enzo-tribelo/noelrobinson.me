@@ -2,6 +2,12 @@
 import Layout from '../layouts/Layout.astro';
 import {
   siGithub, siX, siInstagram, siSpotify,
+  siDocker, siKubernetes,
+  siTypescript, siJavascript, siKotlin, siReact, siVuedotjs,
+  siNextdotjs, siGatsby, siHugo, siSpring, siGraphql,
+  siMongodb, siPostgresql, siElasticsearch,
+  siFlux, siFastly,
+  siHomeassistant, siClaude, siWebpack
 } from 'simple-icons';
 
 const social = [
@@ -12,19 +18,78 @@ const social = [
   { name: 'Spotify', url: 'https://open.spotify.com/user/1127314265', path: siSpotify.path },
 ];
 
-const stats = [
-  { value: '25+', label: 'Years' },
-  { value: '6', label: 'Live Products' },
-  { value: '∞', label: 'Curiosity' },
+const techGroups = [
+  { title: 'AI & Orchestration', items: [
+    { n: 'Claude', u: 'https://claude.ai/', p: siClaude.path },
+    { n: 'OpenClaw', u: 'https://openclaw.ai/' },
+    { n: 'Amazon Bedrock', u: 'https://aws.amazon.com/bedrock/' },
+    { n: 'Multi-Agent Systems', u: 'https://docs.anthropic.com/' },
+    { n: 'OpenAI', u: 'https://openai.com/' },
+    { n: 'Whisper', u: 'https://openai.com/research/whisper' },
+    { n: 'ElevenLabs', u: 'https://elevenlabs.io/' },
+    { n: 'LLM Tooling', u: 'https://docs.anthropic.com/en/docs/build-with-claude/tool-use' },
+  ]},
+  { title: 'Cloud & Infrastructure', items: [
+    { n: 'AWS', u: 'https://aws.amazon.com/' },
+    { n: 'Azure', u: 'https://azure.microsoft.com/' },
+    { n: 'Vercel', u: 'https://vercel.com/' },
+    { n: 'Kubernetes', u: 'https://kubernetes.io/', p: siKubernetes.path },
+    { n: 'Lambda', u: 'https://aws.amazon.com/lambda/' },
+    { n: 'Fargate', u: 'https://aws.amazon.com/fargate/' },
+    { n: 'Amplify', u: 'https://aws.amazon.com/amplify/' },
+    { n: 'SES', u: 'https://aws.amazon.com/ses/' },
+    { n: 'Route 53', u: 'https://aws.amazon.com/route53/' },
+    { n: 'Fastly', u: 'https://www.fastly.com/', p: siFastly.path },
+    { n: 'FluxCD', u: 'https://fluxcd.io/', p: siFlux.path },
+    { n: 'Docker', u: 'https://www.docker.com/', p: siDocker.path },
+  ]},
+  { title: 'Languages', items: [
+    { n: 'TypeScript', u: 'https://www.typescriptlang.org/', p: siTypescript.path },
+    { n: 'JavaScript', u: 'https://www.javascript.com/', p: siJavascript.path },
+    { n: 'Python', u: 'https://www.python.org/' },
+    { n: 'Kotlin', u: 'https://kotlinlang.org/', p: siKotlin.path },
+    { n: 'Java', u: 'https://docs.oracle.com/javase/' },
+  ]},
+  { title: 'Frontend', items: [
+    { n: 'Next.js', u: 'https://nextjs.org/', p: siNextdotjs.path },
+    { n: 'React', u: 'https://reactjs.org/', p: siReact.path },
+    { n: 'Astro', u: 'https://astro.build/' },
+    { n: 'Tailwind CSS', u: 'https://tailwindcss.com/' },
+    { n: 'Vue.js', u: 'https://vuejs.org/', p: siVuedotjs.path },
+    { n: 'Gatsby', u: 'https://www.gatsbyjs.com/', p: siGatsby.path },
+    { n: 'Hugo', u: 'https://gohugo.io/', p: siHugo.path },
+  ]},
+  { title: 'Architecture & Frameworks', items: [
+    { n: 'REST APIs', u: 'https://restfulapi.net/' },
+    { n: 'GraphQL', u: 'https://graphql.org/', p: siGraphql.path },
+    { n: 'Micro Front Ends', u: 'https://micro-frontends.org/' },
+    { n: 'Module Federation', u: 'https://webpack.js.org/concepts/module-federation/', p: siWebpack.path },
+    { n: 'OIDC / Auth', u: 'https://openid.net/developers/how-connect-works/' },
+    { n: 'Micronaut', u: 'https://micronaut.io/' },
+    { n: 'Spring', u: 'https://spring.io/', p: siSpring.path },
+  ]},
+  { title: 'Databases & Storage', items: [
+    { n: 'PostgreSQL', u: 'https://www.postgresql.org/', p: siPostgresql.path },
+    { n: 'Supabase', u: 'https://supabase.com/' },
+    { n: 'MongoDB', u: 'https://www.mongodb.com/', p: siMongodb.path },
+    { n: 'Elasticsearch', u: 'https://www.elastic.co/', p: siElasticsearch.path },
+    { n: 'DynamoDB', u: 'https://aws.amazon.com/dynamodb/' },
+  ]},
 ];
 
-const capabilities = [
-  { tag: '01', title: 'AI & Agents', desc: 'Multi-agent orchestration, LLM tooling, autonomous workflows. Claude, Bedrock, OpenClaw.' },
-  { tag: '02', title: 'Cloud Native', desc: 'AWS, Azure, Kubernetes, EKS, serverless. Infrastructure as code, GitOps, FluxCD.' },
-  { tag: '03', title: 'Cyber Resilience', desc: 'Security hardening, threat prevention, compliance. OWASP, OAuth2, OIDC.' },
-  { tag: '04', title: 'Engineering Leadership', desc: 'Building and scaling high-performing teams. Agile, DevOps culture, technical strategy.' },
-  { tag: '05', title: 'Frontend & Product', desc: 'React, Next.js, Vue, Astro, Tailwind. Shipping consumer products that people use.' },
-  { tag: '06', title: 'Performance & DevOps', desc: 'CI/CD pipelines, JMeter automation, horizontal scaling. Making things fast and reliable.' },
+const books = [
+  { name: 'Accelerate', url: 'https://amzn.to/2PrG24M' },
+  { name: 'Multipliers', url: 'https://amzn.to/31lNjFK' },
+  { name: 'Turn the Ship Around!', url: 'https://amzn.to/3cIUzSJ' },
+  { name: 'Clean Code', url: 'https://amzn.to/2Qy1fua' },
+  { name: 'Clean Agile', url: 'https://amzn.to/3w2ibta' },
+  { name: 'Building Evolutionary Architecture', url: 'https://amzn.to/3fdPeVb' },
+  { name: 'Domain Driven Design', url: 'https://amzn.to/3ssoFPJ' },
+  { name: 'Refactoring', url: 'https://amzn.to/3fiV5sq' },
+  { name: 'Continuous Delivery', url: 'https://amzn.to/3foWOw2' },
+  { name: 'Chasing Excellence', url: 'https://amzn.to/2R2Eb7n' },
+  { name: 'How Champions Think', url: 'https://amazon.co.uk/gp/product/1476788642' },
+  { name: 'Blockchain Revolution', url: 'https://amazon.co.uk/gp/product/1101980141' },
 ];
 
 const projects = [
@@ -39,23 +104,65 @@ const projects = [
   { name: 'Tribelo', url: 'https://www.tribelo.co.uk', tag: 'Consultancy' },
 ];
 
+const leadership = [
+  { name: 'Agile Manifesto', url: 'https://agilemanifesto.org/' },
+  { name: 'DevOps', url: 'https://aws.amazon.com/devops/what-is-devops/' },
+  { name: 'CNCF', url: 'https://www.cncf.io/' },
+  { name: 'Meetup', url: 'https://www.meetup.com/members/31470592/' },
+];
+
+const lifeGroups = [
+  { title: 'Health & Fitness', items: [
+    { n: 'Revival Strength', u: 'https://revival-strength.com/' },
+    { n: 'CrossFit Bath', u: 'https://crossfitbath.com/' },
+    { n: 'BattleGround Fitness', u: 'https://www.mybattleground.co.uk/' },
+    { n: 'Stotherts Rugby', u: 'https://www.pitchero.com/clubs/stothertpitt/' },
+    { n: 'Truecoach', u: 'https://app.truecoach.co/' },
+  ]},
+  { title: 'Family & Community', items: [
+    { n: 'Down Syndrome Association', u: 'https://www.downs-syndrome.org.uk/' },
+    { n: "Helen's Kitchen", u: 'https://helens.kitchen' },
+    { n: 'Lyme Regis', u: 'http://www.lymeregis.org/' },
+  ]},
+  { title: 'Smart Home & Energy', items: [
+    { n: 'Home Assistant', u: 'https://www.home-assistant.io/', p: siHomeassistant.path },
+    { n: 'Tesla', u: 'https://www.tesla.com/energy' },
+    { n: 'Octopus Energy', u: 'https://octopus.energy/' },
+    { n: 'SolaX Cloud', u: 'https://www.solaxcloud.com/' },
+    { n: 'SmartThings', u: 'https://www.smartthings.com/' },
+    { n: 'eWeLink', u: 'https://www.ewelink.cc/' },
+  ]},
+  { title: 'Trading & Markets', items: [
+    { n: 'Binance API', u: 'https://developers.binance.com/' },
+    { n: 'Polymarket', u: 'https://polymarket.com/' },
+    { n: 'Algorithmic Trading', u: 'https://www.investopedia.com/terms/a/algorithmictrading.asp' },
+  ]},
+  { title: 'Podcasts', items: [
+    { n: 'Spotify', u: 'https://open.spotify.com/user/1127314265', p: siSpotify.path },
+    { n: 'InfoQ', u: 'https://www.infoq.com/podcasts/' },
+    { n: 'ThoughtWorks', u: 'https://www.thoughtworks.com/insights/podcasts' },
+    { n: 'SE Daily', u: 'https://softwareengineeringdaily.com/' },
+    { n: 'The Cloudcast', u: 'https://www.thecloudcast.net/' },
+    { n: 'Fintech Insider', u: 'https://fi.11fs.com/' },
+    { n: 'Views on Vue', u: 'https://topenddevs.com/podcasts/views-on-vue' },
+  ]},
+];
+
 const navItems = [
-  { label: 'About', href: '#about' },
-  { label: 'Work', href: '#work' },
+  { label: 'Tech', href: '#tech' },
   { label: 'Projects', href: '#projects' },
+  { label: 'Books', href: '#books' },
+  { label: 'Life', href: '#life' },
   { label: 'CV', href: '/cv' },
 ];
 ---
 
 <Layout title="Noel Robinson">
 
-  <!-- HERO — full viewport -->
+  <!-- HERO -->
   <section class="relative min-h-screen flex flex-col justify-end bg-bg overflow-hidden">
-    
-    <!-- Grain overlay -->
     <div class="absolute inset-0 opacity-[0.03] pointer-events-none" style="background-image: url('data:image/svg+xml,%3Csvg viewBox=%220 0 256 256%22 xmlns=%22http://www.w3.org/2000/svg%22%3E%3Cfilter id=%22noise%22%3E%3CfeTurbulence type=%22fractalNoise%22 baseFrequency=%220.9%22 numOctaves=%224%22 stitchTiles=%22stitch%22/%3E%3C/filter%3E%3Crect width=%22100%25%22 height=%22100%25%22 filter=%22url(%23noise)%22/%3E%3C/svg%3E'); background-size: 128px;"></div>
 
-    <!-- Nav -->
     <nav class="fixed top-0 left-0 right-0 z-50 mix-blend-difference">
       <div class="max-w-7xl mx-auto px-6 sm:px-10 h-16 flex items-center justify-between">
         <a href="#" class="font-['Bebas_Neue'] text-white text-2xl tracking-wide">NR</a>
@@ -67,34 +174,26 @@ const navItems = [
       </div>
     </nav>
 
-    <!-- Hero content -->
     <div class="relative z-10 max-w-7xl mx-auto px-6 sm:px-10 pb-16 sm:pb-24 w-full">
-      
-      <!-- Oversized name -->
       <h1 class="font-['Bebas_Neue'] text-[clamp(4rem,15vw,12rem)] leading-[0.85] text-white mb-6 tracking-tight">
         Noel<br/>Robinson
       </h1>
-
       <div class="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-8">
         <div class="max-w-lg">
           <p class="font-['JetBrains_Mono'] text-accent text-xs uppercase tracking-[0.2em] mb-3">Technology Leader</p>
-          <p class="text-text-muted text-base leading-relaxed">
+          <p class="text-text-muted text-base leading-relaxed font-['Inter']">
             Building what's next — AI agents, cloud platforms, and products that ship. 25 years of making complex things work.
           </p>
         </div>
-
-        <!-- Stats -->
         <div class="flex gap-10">
-          {stats.map(s => (
+          {[{ v: '25+', l: 'Years' }, { v: '9', l: 'Products' }, { v: '∞', l: 'Curiosity' }].map(s => (
             <div class="text-center">
-              <div class="font-['Bebas_Neue'] text-3xl sm:text-4xl text-white">{s.value}</div>
-              <div class="font-['JetBrains_Mono'] text-[10px] text-text-muted uppercase tracking-widest">{s.label}</div>
+              <div class="font-['Bebas_Neue'] text-3xl sm:text-4xl text-white">{s.v}</div>
+              <div class="font-['JetBrains_Mono'] text-[10px] text-text-muted uppercase tracking-widest">{s.l}</div>
             </div>
           ))}
         </div>
       </div>
-
-      <!-- Social strip -->
       <div class="flex items-center gap-5 mt-10 pt-8 border-t border-border">
         {social.map(s => (
           <a href={s.url} target="_blank" rel="noopener noreferrer" class="text-text-muted hover:text-accent transition-colors" aria-label={s.name}>
@@ -104,111 +203,163 @@ const navItems = [
         <span class="ml-auto font-['JetBrains_Mono'] text-[10px] text-text-muted tracking-widest hidden sm:block">SCROLL ↓</span>
       </div>
     </div>
-
-    <!-- Accent line -->
     <div class="absolute bottom-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-accent/40 to-transparent"></div>
   </section>
 
-  <!-- ABOUT / CAPABILITIES -->
-  <section id="about" class="bg-bg py-24 sm:py-32 scroll-mt-16">
+  <!-- TECH STACK -->
+  <section id="tech" class="bg-bg py-24 sm:py-32 scroll-mt-16">
     <div class="max-w-7xl mx-auto px-6 sm:px-10">
-      
       <div class="flex items-center gap-4 mb-16">
         <span class="font-['JetBrains_Mono'] text-accent text-xs tracking-[0.2em]">01</span>
         <div class="flex-1 h-px bg-border"></div>
-        <h2 class="font-['Bebas_Neue'] text-4xl sm:text-5xl text-white tracking-wide">What I Do</h2>
+        <h2 class="font-['Bebas_Neue'] text-4xl sm:text-5xl text-white tracking-wide">Tech Stack</h2>
       </div>
 
-      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-px bg-border">
-        {capabilities.map(cap => (
-          <div class="bg-bg p-8 sm:p-10 group hover:bg-bg-elevated transition-colors">
-            <span class="font-['JetBrains_Mono'] text-[10px] text-accent tracking-widest block mb-4">{cap.tag}</span>
-            <h3 class="text-lg font-semibold text-white mb-3 font-['Inter']">{cap.title}</h3>
-            <p class="text-sm text-text-muted leading-relaxed font-['Inter']">{cap.desc}</p>
+      <div class="space-y-10">
+        {techGroups.map(group => (
+          <div>
+            <h3 class="font-['JetBrains_Mono'] text-[10px] text-accent uppercase tracking-widest mb-4">{group.title}</h3>
+            <div class="flex flex-wrap gap-2">
+              {group.items.map(item => (
+                <a href={item.u} target="_blank" rel="noopener noreferrer"
+                   class="inline-flex items-center gap-2 px-3.5 py-2 text-sm text-text bg-surface rounded-sm hover:bg-bg-elevated hover:text-accent border border-transparent hover:border-accent/20 transition-all font-['Inter']">
+                  {item.p && <svg viewBox="0 0 24 24" fill="currentColor" class="w-3.5 h-3.5 opacity-50"><path d={item.p}/></svg>}
+                  {item.n}
+                </a>
+              ))}
+            </div>
           </div>
         ))}
       </div>
-
-    </div>
-  </section>
-
-  <!-- WORK / EXPERIENCE -->
-  <section id="work" class="bg-bg-elevated py-24 sm:py-32 scroll-mt-16">
-    <div class="max-w-7xl mx-auto px-6 sm:px-10">
-
-      <div class="flex items-center gap-4 mb-16">
-        <span class="font-['JetBrains_Mono'] text-accent text-xs tracking-[0.2em]">02</span>
-        <div class="flex-1 h-px bg-border"></div>
-        <h2 class="font-['Bebas_Neue'] text-4xl sm:text-5xl text-white tracking-wide">Experience</h2>
-      </div>
-
-      <div class="space-y-0 divide-y divide-border">
-        <a href="/cv" class="group flex flex-col sm:flex-row sm:items-center justify-between py-8 hover:pl-4 transition-all">
-          <div>
-            <h3 class="text-xl font-semibold text-white font-['Inter'] group-hover:text-accent transition-colors">Tribelo</h3>
-            <p class="text-sm text-text-muted font-['Inter'] mt-1">Founder & Technology Consultant</p>
-          </div>
-          <span class="font-['JetBrains_Mono'] text-xs text-text-muted mt-2 sm:mt-0">2019 — PRESENT</span>
-        </a>
-        <a href="/cv" class="group flex flex-col sm:flex-row sm:items-center justify-between py-8 hover:pl-4 transition-all">
-          <div>
-            <h3 class="text-xl font-semibold text-white font-['Inter'] group-hover:text-accent transition-colors">National Trust</h3>
-            <p class="text-sm text-text-muted font-['Inter'] mt-1">Principal Developer</p>
-          </div>
-          <span class="font-['JetBrains_Mono'] text-xs text-text-muted mt-2 sm:mt-0">2014 — 2019</span>
-        </a>
-        <a href="/cv" class="group flex flex-col sm:flex-row sm:items-center justify-between py-8 hover:pl-4 transition-all">
-          <div>
-            <h3 class="text-xl font-semibold text-white font-['Inter'] group-hover:text-accent transition-colors">Which?</h3>
-            <p class="text-sm text-text-muted font-['Inter'] mt-1">Senior Agile Java Developer</p>
-          </div>
-          <span class="font-['JetBrains_Mono'] text-xs text-text-muted mt-2 sm:mt-0">2012 — 2014</span>
-        </a>
-        <a href="/cv" class="group flex flex-col sm:flex-row sm:items-center justify-between py-8 hover:pl-4 transition-all">
-          <div>
-            <h3 class="text-xl font-semibold text-white font-['Inter'] group-hover:text-accent transition-colors">Virgin Media</h3>
-            <p class="text-sm text-text-muted font-['Inter'] mt-1">Java Designer / Developer</p>
-          </div>
-          <span class="font-['JetBrains_Mono'] text-xs text-text-muted mt-2 sm:mt-0">2000 — 2011</span>
-        </a>
-      </div>
-
-      <div class="mt-10 text-right">
-        <a href="/cv" class="font-['JetBrains_Mono'] text-xs text-accent hover:text-white transition-colors tracking-widest uppercase">Full CV →</a>
-      </div>
-
     </div>
   </section>
 
   <!-- PROJECTS -->
-  <section id="projects" class="bg-bg py-24 sm:py-32 scroll-mt-16">
+  <section id="projects" class="bg-bg-elevated py-24 sm:py-32 scroll-mt-16">
     <div class="max-w-7xl mx-auto px-6 sm:px-10">
-
       <div class="flex items-center gap-4 mb-16">
-        <span class="font-['JetBrains_Mono'] text-accent text-xs tracking-[0.2em]">03</span>
+        <span class="font-['JetBrains_Mono'] text-accent text-xs tracking-[0.2em]">02</span>
         <div class="flex-1 h-px bg-border"></div>
         <h2 class="font-['Bebas_Neue'] text-4xl sm:text-5xl text-white tracking-wide">Projects</h2>
       </div>
 
       <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
         {projects.map(p => (
-          <a
-            href={p.url}
-            target="_blank"
-            rel="noopener noreferrer"
-            class="group relative p-6 bg-surface rounded-sm overflow-hidden hover:bg-bg-elevated transition-all border border-transparent hover:border-accent/20"
-          >
-            <div class="flex items-start justify-between">
-              <div>
-                <span class="font-['JetBrains_Mono'] text-[10px] text-accent uppercase tracking-widest block mb-2">{p.tag}</span>
-                <h3 class="text-base font-semibold text-white font-['Inter'] group-hover:text-accent transition-colors">{p.name}</h3>
-              </div>
+          <a href={p.url} target="_blank" rel="noopener noreferrer"
+             class="group p-6 bg-bg rounded-sm border border-transparent hover:border-accent/20 transition-all">
+            <span class="font-['JetBrains_Mono'] text-[10px] text-accent uppercase tracking-widest block mb-2">{p.tag}</span>
+            <div class="flex items-center justify-between">
+              <h3 class="text-base font-semibold text-white font-['Inter'] group-hover:text-accent transition-colors">{p.name}</h3>
               <span class="text-text-muted group-hover:text-accent transition-colors text-sm">↗</span>
             </div>
           </a>
         ))}
       </div>
+    </div>
+  </section>
 
+  <!-- BOOKS -->
+  <section id="books" class="bg-bg py-24 sm:py-32 scroll-mt-16">
+    <div class="max-w-7xl mx-auto px-6 sm:px-10">
+      <div class="flex items-center gap-4 mb-16">
+        <span class="font-['JetBrains_Mono'] text-accent text-xs tracking-[0.2em]">03</span>
+        <div class="flex-1 h-px bg-border"></div>
+        <h2 class="font-['Bebas_Neue'] text-4xl sm:text-5xl text-white tracking-wide">Bookshelf</h2>
+      </div>
+
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-0 divide-y divide-border sm:divide-y-0">
+        {books.map((book, i) => (
+          <a href={book.url} target="_blank" rel="noopener noreferrer"
+             class="group flex items-center gap-3 py-3.5 border-b border-border hover:pl-2 transition-all">
+            <span class="font-['JetBrains_Mono'] text-[10px] text-text-muted w-5 shrink-0">{String(i + 1).padStart(2, '0')}</span>
+            <span class="text-sm font-medium text-text group-hover:text-accent transition-colors font-['Inter'] flex-1">{book.name}</span>
+            <span class="text-xs text-text-muted group-hover:text-accent transition-colors">↗</span>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section class="bg-bg-elevated py-24 sm:py-32 scroll-mt-16">
+    <div class="max-w-7xl mx-auto px-6 sm:px-10">
+      <div class="flex items-center gap-4 mb-16">
+        <span class="font-['JetBrains_Mono'] text-accent text-xs tracking-[0.2em]">04</span>
+        <div class="flex-1 h-px bg-border"></div>
+        <h2 class="font-['Bebas_Neue'] text-4xl sm:text-5xl text-white tracking-wide">Experience</h2>
+      </div>
+
+      <div class="divide-y divide-border">
+        {[
+          { role: 'Founder & Technology Consultant', co: 'Tribelo', period: '2019 — Present' },
+          { role: 'Principal Developer', co: 'National Trust', period: '2014 — 2019' },
+          { role: 'Senior Agile Java Developer', co: 'Which?', period: '2012 — 2014' },
+          { role: 'Java Designer / Developer', co: 'Virgin Media', period: '2000 — 2011' },
+        ].map(job => (
+          <a href="/cv" class="group flex flex-col sm:flex-row sm:items-center justify-between py-8 hover:pl-4 transition-all">
+            <div>
+              <h3 class="text-lg font-semibold text-white font-['Inter'] group-hover:text-accent transition-colors">{job.role}</h3>
+              <p class="text-sm text-text-muted font-['Inter'] mt-1">{job.co}</p>
+            </div>
+            <span class="font-['JetBrains_Mono'] text-xs text-text-muted mt-2 sm:mt-0">{job.period}</span>
+          </a>
+        ))}
+      </div>
+      <div class="mt-10 text-right">
+        <a href="/cv" class="font-['JetBrains_Mono'] text-xs text-accent hover:text-white transition-colors tracking-widest uppercase">Full CV →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- LEADERSHIP -->
+  <section class="bg-bg py-24 sm:py-32 scroll-mt-16">
+    <div class="max-w-7xl mx-auto px-6 sm:px-10">
+      <div class="flex items-center gap-4 mb-16">
+        <span class="font-['JetBrains_Mono'] text-accent text-xs tracking-[0.2em]">05</span>
+        <div class="flex-1 h-px bg-border"></div>
+        <h2 class="font-['Bebas_Neue'] text-4xl sm:text-5xl text-white tracking-wide">Leadership</h2>
+      </div>
+
+      <div class="flex flex-wrap gap-3">
+        {leadership.map(item => (
+          <a href={item.url} target="_blank" rel="noopener noreferrer"
+             class="px-5 py-2.5 text-sm font-medium text-text bg-surface rounded-sm hover:bg-bg-elevated hover:text-accent border border-transparent hover:border-accent/20 transition-all font-['Inter']">
+            {item.name}
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- LIFE -->
+  <section id="life" class="bg-bg-elevated py-24 sm:py-32 scroll-mt-16">
+    <div class="max-w-7xl mx-auto px-6 sm:px-10">
+      <div class="flex items-center gap-4 mb-16">
+        <span class="font-['JetBrains_Mono'] text-accent text-xs tracking-[0.2em]">06</span>
+        <div class="flex-1 h-px bg-border"></div>
+        <h2 class="font-['Bebas_Neue'] text-4xl sm:text-5xl text-white tracking-wide">Beyond Code</h2>
+      </div>
+
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-12">
+        {lifeGroups.map(group => (
+          <div>
+            <h3 class="font-['JetBrains_Mono'] text-[10px] text-accent uppercase tracking-widest mb-4">{group.title}</h3>
+            <div class="space-y-2">
+              {group.items.map(item => (
+                <a href={item.u} target="_blank" rel="noopener noreferrer"
+                   class="flex items-center gap-2.5 text-sm text-text-muted hover:text-accent transition-colors font-['Inter'] py-0.5">
+                  {item.p ? (
+                    <svg viewBox="0 0 24 24" fill="currentColor" class="w-3.5 h-3.5 opacity-40"><path d={item.p}/></svg>
+                  ) : (
+                    <span class="w-1 h-1 rounded-full bg-accent/30 shrink-0"></span>
+                  )}
+                  {item.n}
+                </a>
+              ))}
+            </div>
+          </div>
+        ))}
+      </div>
     </div>
   </section>
 
@@ -227,7 +378,7 @@ const navItems = [
     </div>
   </footer>
 
-  <!-- Mobile FAB Nav -->
+  <!-- Mobile FAB -->
   <div class="sm:hidden fixed bottom-6 right-6 z-50" style="padding-bottom: env(safe-area-inset-bottom)" id="mobile-nav">
     <div id="nav-menu" class="hidden flex-col items-end gap-2 mb-3">
       {navItems.map(n => (
@@ -251,33 +402,25 @@ const navItems = [
   const menu = document.getElementById('nav-menu')!;
   const open = document.getElementById('ico-open')!;
   const close = document.getElementById('ico-close')!;
-
   toggle.addEventListener('click', () => {
-    menu.classList.toggle('hidden');
-    menu.classList.toggle('flex');
-    open.classList.toggle('hidden');
-    close.classList.toggle('hidden');
+    menu.classList.toggle('hidden'); menu.classList.toggle('flex');
+    open.classList.toggle('hidden'); close.classList.toggle('hidden');
   });
-
   menu.addEventListener('click', () => {
-    menu.classList.add('hidden');
-    menu.classList.remove('flex');
-    open.classList.remove('hidden');
-    close.classList.add('hidden');
+    menu.classList.add('hidden'); menu.classList.remove('flex');
+    open.classList.remove('hidden'); close.classList.add('hidden');
   });
 
-  // Reveal on scroll
   const obs = new IntersectionObserver((entries) => {
     entries.forEach(e => {
       if (e.isIntersecting) {
-        e.target.style.opacity = '1';
-        e.target.style.transform = 'translateY(0)';
+        (e.target as HTMLElement).style.opacity = '1';
+        (e.target as HTMLElement).style.transform = 'translateY(0)';
         obs.unobserve(e.target);
       }
     });
   }, { threshold: 0.1 });
-
-  document.querySelectorAll('#about > div, #work > div, #projects > div').forEach(el => {
+  document.querySelectorAll('section > div').forEach(el => {
     (el as HTMLElement).style.opacity = '0';
     (el as HTMLElement).style.transform = 'translateY(24px)';
     (el as HTMLElement).style.transition = 'opacity 0.6s ease, transform 0.6s ease';
